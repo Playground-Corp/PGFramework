@@ -12,7 +12,7 @@ import UIKit
 // MARK: - Property
 open class BaseViewController: UIViewController {
     // manager
-    open let animatorManager = AnimatorManager()
+    public var animatorManager = AnimatorManager()
 }
 
 // MARK: - Life cycle
