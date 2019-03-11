@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum NavigationType: Int {
+public enum NavigationType: Int {
     case push
     case pop
     case slide_push
@@ -16,16 +16,16 @@ enum NavigationType: Int {
     case none
 }
 
-class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
+public class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
     let animationDuration = 0.4
-    var navigationType: NavigationType = .none
+    public var navigationType: NavigationType = .none
     var operation: UINavigationController.Operation = .push
-    func transitionDuration(using transitionContext:
+    public func transitionDuration(using transitionContext:
         UIViewControllerContextTransitioning?) -> TimeInterval {
         return animationDuration
     }
     
-    func animateTransition(using transitionContext:
+    public func animateTransition(using transitionContext:
         UIViewControllerContextTransitioning) {
         switch operation {
         case .push:
@@ -48,7 +48,7 @@ class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
         }
     }
     
-    func push(_ transitionContext:
+    public func push(_ transitionContext:
         UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
@@ -67,7 +67,7 @@ class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
         })
     }
     
-    func pop(_ transitionContext:
+    public func pop(_ transitionContext:
         UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
@@ -86,7 +86,7 @@ class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
         })
     }
     
-    func slide_push(_ transitionContext:
+    public func slide_push(_ transitionContext:
         UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
@@ -105,7 +105,7 @@ class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
             toView.transform = CGAffineTransform.identity
         })
     }
-    func slide_pop(_ transitionContext:
+    public func slide_pop(_ transitionContext:
         UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
@@ -125,7 +125,7 @@ class AnimatorManager: NSObject, UIViewControllerAnimatedTransitioning {
         })
     }
 
-    func modal(_ transitionContext:
+    public func modal(_ transitionContext:
         UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
