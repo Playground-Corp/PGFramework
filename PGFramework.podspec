@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGFramework"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "This is Framework of MVC."
   s.description  = <<-DESC
                     - View
