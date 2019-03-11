@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4519213223675FB00EAB3B7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4519212223675FB00EAB3B7 /* Test.swift */; };
 		F45DA0D022366F8300288C68 /* PGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F45DA0CE22366F8300288C68 /* PGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4519212223675FB00EAB3B7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		F45DA0CB22366F8300288C68 /* PGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DA0CE22366F8300288C68 /* PGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGFramework.h; sourceTree = "<group>"; };
 		F45DA0CF22366F8300288C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +29,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4519211223675E900EAB3B7 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				F4519212223675FB00EAB3B7 /* Test.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		F45DA0C122366F8300288C68 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +56,7 @@
 		F45DA0CD22366F8300288C68 /* PGFramework */ = {
 			isa = PBXGroup;
 			children = (
+				F4519211223675E900EAB3B7 /* classes */,
 				F45DA0CE22366F8300288C68 /* PGFramework.h */,
 				F45DA0CF22366F8300288C68 /* Info.plist */,
 			);
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					F45DA0CA22366F8300288C68 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4519213223675FB00EAB3B7 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +274,7 @@
 		F45DA0D422366F8300288C68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.playground.PGFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +301,7 @@
 		F45DA0D522366F8300288C68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
