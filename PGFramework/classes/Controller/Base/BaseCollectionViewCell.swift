@@ -9,13 +9,13 @@
 import UIKit
 
 // MARK: - Property
-class BaseCollectionViewCell: UICollectionViewCell {
+open class BaseCollectionViewCell: UICollectionViewCell {
 
 }
 
 // MARK: - Life cycle
 extension BaseCollectionViewCell {
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
     }
 }

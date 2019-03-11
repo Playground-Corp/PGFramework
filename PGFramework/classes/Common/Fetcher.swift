@@ -10,13 +10,13 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-struct Const {
+public struct Const {
     static let HOST: String = "https://appcookingecmodel.work/api/"
     static let TIME_INTERVAL: TimeInterval = 10.0
 }
 
-class ApiManager {
-    static let sharedInstance: SessionManager = {
+public class ApiManager {
+    public static let sharedInstance: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         configuration.timeoutIntervalForRequest = Const.TIME_INTERVAL
@@ -24,11 +24,11 @@ class ApiManager {
     }()
 }
 
-class Fetcher: NSObject {
+public class Fetcher: NSObject {
     // MARK: - Property
-    var url: String!
+    public var url: String!
 
-    func request(path: String?,
+    public func request(path: String?,
                  method: HTTPMethod,
                  parameters: [String: Any]?,
                  success: @escaping ([String: Any]?) -> Void,
@@ -55,7 +55,7 @@ class Fetcher: NSObject {
         }
     }
 
-    func uploadImage(path: String?,
+    public func uploadImage(path: String?,
                      data: Data,
                      success: @escaping ([String: Any]?) -> Void,
                      failed: @escaping (Error) -> Void) {
@@ -85,17 +85,17 @@ class Fetcher: NSObject {
         })
     }
 
-    func downloadImage(imageView: UIImageView, url: String) {
+    public func downloadImage(imageView: UIImageView, url: String) {
         if let _url = URL(string: url) {
             imageView.af_setImage(withURL: _url)
         }
     }
 
-    func setHost() {
+    public func setHost() {
         url = Const.HOST
     }
 
-    func setPath(path: String?) {
+    public func setPath(path: String?) {
         if let path = path {
             url = url + path
         }

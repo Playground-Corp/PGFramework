@@ -10,9 +10,9 @@ import UIKit
 
 
 // MARK: - Property
-class BaseView: UIView {
-    var views: [Any]?
-    required init?(coder aDecoder: NSCoder) {
+open class BaseView: UIView {
+    public var views: [Any]?
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         views = loadViewFromXib(withOwner: self)
         if let contentView = views?.first as? UIView {

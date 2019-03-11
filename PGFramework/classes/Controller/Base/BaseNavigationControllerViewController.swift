@@ -9,17 +9,17 @@
 import UIKit
 
 // MARK: - Property
-class BaseNavigationController: UINavigationController {
+open class BaseNavigationController: UINavigationController {
     
 }
 
 // MARK: - Life cycle
 extension BaseNavigationController {
-    override func loadView() {
+    override open func loadView() {
         super.loadView()
     }
     
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     

@@ -9,30 +9,33 @@
 import UIKit
 
 // MARK: - Property
-struct ListModel<Element> {
+public struct ListModel<Element> {
     /*** コンテンツリスト */
-    var contents: [Element] = []
+    public var contents: [Element] = []
     
     /*** 何個目からの値を取得する数 */
-    var offset: Int = 0
+    public var offset: Int = 0
     
     /*** コンテンツの最大数 */
-    var max_count: Int = 0
+    public var max_count: Int = 0
     
     /*** コンテンツを更に追加するか否か */
-    var loadMore: Bool = false
+    public var loadMore: Bool = false
+
+    public init() {
+    }
 }
 
 // MARK: - Method
 extension ListModel {
     /*** コンテンツに追加 */
-    mutating func insert(_ content: Element) {
+    public mutating func insert(_ content: Element) {
         contents += [content]
         offset += 1
     }
     
     /*** コンテンツに追加 at: 追加する場所を指定 */
-    mutating func insert(_ at: UInt) -> Element? {
+    public mutating func insert(_ at: UInt) -> Element? {
         if contents.count-1 >= at {
             offset += 1
             return contents[Int(at)]
@@ -41,7 +44,7 @@ extension ListModel {
     }
     
     /*** 最後のコンテンツを取得 */
-    mutating func last() -> Element? {
+    public mutating func last() -> Element? {
         if let content = contents.popLast() {
             return content
         }
@@ -49,7 +52,7 @@ extension ListModel {
     }
     
     /*** 最初のコンテンツを取得 */
-    mutating func first() -> Element? {
+    public mutating func first() -> Element? {
         if let content = contents.first {
             return content
         }
@@ -57,12 +60,12 @@ extension ListModel {
     }
     
     /*** コンテンツの順番を反転 */
-    mutating func reverse() {
+    public mutating func reverse() {
         contents.reverse()
     }
     
     /*** コンテンツを削除 at: 削除する場所を指定 */
-    mutating func remove(at: UInt) -> Element? {
+    public mutating func remove(at: UInt) -> Element? {
         if contents.count-1 >= at {
             offset -= 1
             return contents.remove(at: Int(at))
@@ -71,7 +74,7 @@ extension ListModel {
     }
     
     /*** コンテンツを全て削除 */
-    mutating func removeAll() {
+    public mutating func removeAll() {
         contents = []
         offset = 0
         loadMore = false

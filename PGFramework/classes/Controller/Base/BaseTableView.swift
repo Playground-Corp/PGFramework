@@ -10,8 +10,8 @@ import UIKit
 
 
 // MARK: - Property
-class BaseTableView: UITableView {
-    required init?(coder aDecoder: NSCoder) {
+open class BaseTableView: UITableView {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.separatorStyle = .none
         self.backgroundColor = .clear

@@ -9,8 +9,8 @@
 import UIKit
 
 // MARK: - Property
-class BaseTableViewCell: UITableViewCell {
-    required init?(coder aDecoder: NSCoder) {
+open class BaseTableViewCell: UITableViewCell {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         selectionStyle = .none
     }

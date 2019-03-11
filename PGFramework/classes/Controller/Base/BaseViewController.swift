@@ -10,19 +10,19 @@ import UIKit
 
 
 // MARK: - Property
-class BaseViewController: UIViewController {
+open class BaseViewController: UIViewController {
     // manager
-    let animatorManager = AnimatorManager()
+    public let animatorManager = AnimatorManager()
 }
 
 // MARK: - Life cycle
 extension BaseViewController {
-    override func loadView() {
+    override open func loadView() {
         super.loadView()
         let _ = loadViewFromXib(withOwner: self)
     }
    
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let navigationController = navigationController {
             navigationController.delegate = self
@@ -33,11 +33,11 @@ extension BaseViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
@@ -45,7 +45,7 @@ extension BaseViewController {
 
 // MARK: - Protocol
 extension BaseViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController,
+    public func navigationController(_ navigationController: UINavigationController,
                               animationControllerFor operation: UINavigationController.Operation,
                               from fromVC: UIViewController,
                               to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -54,7 +54,7 @@ extension BaseViewController: UINavigationControllerDelegate {
 }
 
 extension BaseViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController,
+    public func tabBarController(_ tabBarController: UITabBarController,
                           animationControllerForTransitionFrom fromVC: UIViewController,
                           to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return animatorManager
