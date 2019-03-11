@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGFramework"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "This is Framework of MVC."
   s.description  = <<-DESC
                     - View
@@ -17,6 +17,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Playground-Corp/PGFramework.git", :tag => s.version }
   s.source_files  = "PGFramework/classes/*.swift"
   s.requires_arc = true
+  s.dependency 'Alamofire'
+  s.dependency 'AlamofireImage'
 end
 
 
