@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGFramework"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "This is Framework of MVC."
   s.description  = <<-DESC
                     - View
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                     - Controller
                     - Common
                    DESC
-
+  s.swift_version = '4.0'
   s.homepage     = "https://github.com/Playground-Corp/PGFramework"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Playground, Inc." => "develop@playground.style" }
