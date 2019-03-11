@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://www.facebook.com/PlaygroundCo2019/"
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/Playground-Corp/PGFramework.git", :tag => s.version }
-  s.source_files  = "PGFramework/classes/**/*.swift"
+  s.source_files  = "PGFramework/classes/*.swift"
   s.requires_arc = true
 end
 
