@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGFramework"
-  s.version      = "0.1.6"
+  s.version      = "0.1.8"
   s.summary      = "This OSS is develop tool for Playground, Inc."
   s.description  = <<-DESC
                     - Create view and controller
@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
   s.source_files  = "PGFramework/classes/{Controller,Model,Common}/**/*.swift"
   s.resources = "PGFramework/classes/View/**/*.xib" 
   s.requires_arc = true
-  s.script_phase = { :name => 'Hello World', :script => 'echo "Hello World"' }
   s.dependency 'Alamofire'
   s.dependency 'AlamofireImage'
 end
