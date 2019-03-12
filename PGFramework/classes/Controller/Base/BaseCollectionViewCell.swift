@@ -15,7 +15,7 @@ open class BaseCollectionViewCell: UICollectionViewCell {
 
 // MARK: - Life cycle
 extension BaseCollectionViewCell {
-    override open func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
     }
 }

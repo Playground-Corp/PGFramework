@@ -15,15 +15,13 @@ open class BaseNavigationController: UINavigationController {
 
 // MARK: - Life cycle
 extension BaseNavigationController {
-    override open func loadView() {
+    open override func loadView() {
         super.loadView()
     }
     
-    override open func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
 }
 
 // MARK: - Protocol

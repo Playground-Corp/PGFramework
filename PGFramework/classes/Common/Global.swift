@@ -9,6 +9,21 @@
 
 import UIKit
 
+public let WIDTH: CGFloat = {
+    var result: CGFloat = 0.0
+    if let first = UIApplication.shared.windows.first {
+        result = first.frame.width
+    }
+    return result
+}()
+
+public let HEIGHT: CGFloat = {
+    var result: CGFloat = 0.0
+    if let first = UIApplication.shared.windows.first {
+        result = first.frame.height
+    }
+    return result
+}()
 
 // MARK: - ***** FUNCTION **********
 public func propertyNames(owner: Any) -> [String] {

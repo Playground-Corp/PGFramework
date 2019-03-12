@@ -12,8 +12,12 @@ import UIKit
 // MARK: - Property
 open class BaseView: UIView {
     public var views: [Any]?
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+}
+
+// MARK: - Life cycle
+extension BaseView {
+    open override func awakeFromNib() {
+        super.awakeFromNib()
         views = loadViewFromXib(withOwner: self)
         if let contentView = views?.first as? UIView {
             contentView.frame = bounds
@@ -21,11 +25,6 @@ open class BaseView: UIView {
             addSubview(contentView)
         }
     }
-}
-
-// MARK: - Life cycle
-extension BaseView {
-    
 }
 // MARK: - Protocol
 extension BaseView {

@@ -11,15 +11,16 @@ import UIKit
 
 // MARK: - Property
 open class BaseTableView: UITableView {
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.separatorStyle = .none
-        self.backgroundColor = .clear
-    }
+
 }
 
 // MARK: - Life cycle
 extension BaseTableView {
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        separatorStyle = .none
+        backgroundColor = .clear
+    }
 }
 
 // MARK: - Protocol

@@ -10,14 +10,15 @@ import UIKit
 
 // MARK: - Property
 open class BaseTableViewCell: UITableViewCell {
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        selectionStyle = .none
-    }
+
 }
 
 // MARK: - Life cycle
 extension BaseTableViewCell {
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
 }
 
 // MARK: - Protocol

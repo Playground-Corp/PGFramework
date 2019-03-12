@@ -9,11 +9,11 @@
 import UIKit
 
 open class BaseTabBarController: UITabBarController {
-    override open func loadView() {
+    open override func loadView() {
         super.loadView()
     }
 
-    override open func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
