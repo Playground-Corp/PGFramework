@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>model</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import PGFramework
+
+
+// MARK: - Property
+class &lt;#Class#&gt; {
+// Path
+fileprivate static let PATH: String = "&lt;#path#&gt;"
+
+// parameters
+var id: Int?
+}
+
+struct &lt;#Class#&gt;Request {
+// parameters
+var id: Int?
+}
+
+
+// MARK: - Parse
+extension &lt;#Class#&gt; {
+static func parse(data: [String: Any]) -&gt; &lt;#Class#&gt; {
+let model = &lt;#Class#&gt;()
+model.id = data["id"] as? Int
+return model
+}
+
+static func setParameter(request: &lt;#Class#&gt;Request) -&gt; [String: Any] {
+var parameter: [String: Any] = [:]
+if let id = request.id {
+    parameter["id"] = id
+}
+
+return parameter
+}
+}
+
+// MARK: - Reads
+extension &lt;#Class#&gt; {
+static func reads(success:@escaping (ListModel&lt;&lt;#Class#&gt;&gt;) -&gt; Void) {
+let fetcher = Fetcher()
+fetcher.request(path: PATH + "?format=json",
+method: .get,
+parameters: nil,
+success: { response in
+    var listModel = ListModel&lt;&lt;#Class#&gt;&gt;()
+    
+    if let response = response,
+    let count = response["count"] {
+        listModel.max_count = count as! Int
+    }
+    
+    if let response = response,
+    let _ = response["next"] {
+        listModel.loadMore = true
+    } else {
+        listModel.loadMore = false
+    }
+    
+    if let response = response,
+    let results = response["results"] as? [[String: AnyObject]] {
+        let _ = results.map { data in
+            let model: &lt;#Class#&gt; = parse(data: data)
+            listModel.insert(model)
+        }
+    }
+    success(listModel)
+},
+failed: { error in
+})
+}
+}
+
+// MARK: - ReadMore
+extension &lt;#Class#&gt; {
+static func readMore(listModel: ListModel&lt;&lt;#Class#&gt;&gt;, success:@escaping (ListModel&lt;&lt;#Class#&gt;&gt;) -&gt; Void) {
+let fetcher = Fetcher()
+fetcher.request(path: PATH + "?format=json" + "&amp;offset=" + String(describing: listModel.contents.count),
+method: .get,
+parameters: nil,
+success: { response in
+    var listModel = listModel
+    
+    if let response = response,
+    let count = response["count"] {
+        listModel.max_count = count as! Int
+    }
+    
+    if let response = response,
+    let _ = response["next"] {
+        listModel.loadMore = true
+    } else {
+        listModel.loadMore = false
+    }
+    
+    if let response = response,
+    let results = response["results"] as? [[String: AnyObject]] {
+        let _ = results.map { data in
+            let model: &lt;#Class#&gt; = parse(data: data)
+            listModel.insert(model)
+        }
+    }
+    success(listModel)
+},
+failed: { error in
+})
+}
+}
+
+// MARK: - ReadAt
+extension &lt;#Class#&gt; {
+static func readAt(request: &lt;#Class#&gt;Request, success:@escaping (ListModel&lt;&lt;#Class#&gt;&gt;) -&gt; Void) {
+let fetcher = Fetcher()
+guard let id = request.id else {
+    return
+}
+fetcher.request(path: PATH + String(describing: id) + "/?format=json",
+method: .get,
+parameters: nil,
+success: { response in
+    var listModel = ListModel&lt;&lt;#Class#&gt;&gt;()
+    
+    if let response = response,
+    let count = response["count"] {
+        listModel.max_count = count as! Int
+    }
+    
+    if let response = response,
+    let _ = response["next"] {
+        listModel.loadMore = true
+    } else {
+        listModel.loadMore = false
+    }
+    
+    if let data = response {
+        let model: &lt;#Class#&gt; = parse(data: data)
+        listModel.insert(model)
+    }
+    success(listModel)
+},
+failed: { error in
+})
+}
+}
+
+// MARK: - Create
+extension &lt;#Class#&gt; {
+static func create(request: &lt;#Class#&gt;Request,
+success:@escaping (ListModel&lt;&lt;#Class#&gt;&gt;) -&gt; Void) {
+let fetcher = Fetcher()
+var param = setParameter(request: request)
+if let _ = param["id"] {
+    param.remove(at: param.index(forKey: "id")!)
+}
+
+fetcher.request(path: PATH + "?format=json",
+method: .post,
+parameters: param,
+success: { response in
+    var listModel = ListModel&lt;&lt;#Class#&gt;&gt;()
+    
+    if let response = response,
+    let count = response["count"] {
+        listModel.max_count = count as! Int
+    }
+    
+    if let response = response,
+    let _ = response["next"] {
+        listModel.loadMore = true
+    } else {
+        listModel.loadMore = false
+    }
+    
+    if let data = response {
+        let model: &lt;#Class#&gt; = parse(data: data)
+        listModel.insert(model)
+    }
+    success(listModel)
+},
+failed: { error in
+    
+})
+
+}
+}
+
+
+// MARK: - Update
+extension &lt;#Class#&gt; {
+static func update(request: &lt;#Class#&gt;Request,
+success:@escaping (ListModel&lt;&lt;#Class#&gt;&gt;) -&gt; Void) {
+let fetcher = Fetcher()
+guard let id = request.id else {
+    return
+}
+var param = setParameter(request: request)
+if let _ = param["id"] {
+    param.remove(at: param.index(forKey: "id")!)
+}
+fetcher.request(path: PATH + String(describing: id) + "/?format=json",
+method: .put,
+parameters: param,
+success: { response in
+    var listModel = ListModel&lt;&lt;#Class#&gt;&gt;()
+    
+    if let response = response,
+    let count = response["count"] {
+        listModel.max_count = count as! Int
+    }
+    
+    if let response = response,
+    let _ = response["next"] {
+        listModel.loadMore = true
+    } else {
+        listModel.loadMore = false
+    }
+    
+    if let data = response {
+        let model: &lt;#Class#&gt; = parse(data: data)
+        listModel.insert(model)
+    }
+    success(listModel)
+},
+failed: { error in
+})
+
+}
+}
+
+// MARK: - Delete
+extension &lt;#Class#&gt; {
+static func delete(request: &lt;#Class#&gt;Request, success:@escaping () -&gt; Void) {
+let fetcher = Fetcher()
+guard let id = request.id else {
+    return
+}
+fetcher.request(path: PATH + String(describing: id) + "/?format=json",
+method: .delete,
+parameters: nil,
+success: { response in
+    success()
+},
+failed: { error in
+})
+}
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7F20D82E-C867-4E77-BDC7-B058488EA6EB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Class Model set</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

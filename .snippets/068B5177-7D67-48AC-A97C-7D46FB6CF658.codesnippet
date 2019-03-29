@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>view</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import PGFramework
+
+
+protocol &lt;#Class#&gt;Delegate: NSObjectProtocol{
+    
+}
+
+extension &lt;#Class#&gt;Delegate {
+
+}
+// MARK: - Property
+class &lt;#Class#&gt;: &lt;#Super Class#&gt; {
+    weak var delegate: &lt;#Class#&gt;Delegate? = nil
+}
+
+// MARK: - Life cycle
+extension &lt;#Class#&gt; {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+
+// MARK: - Protocol
+extension &lt;#Class#&gt; {
+
+}
+
+// MARK: - method
+extension &lt;#Class#&gt; {
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>068B5177-7D67-48AC-A97C-7D46FB6CF658</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>class view set</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

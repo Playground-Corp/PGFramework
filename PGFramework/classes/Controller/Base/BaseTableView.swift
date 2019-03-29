@@ -19,7 +19,6 @@ extension BaseTableView {
     open override func awakeFromNib() {
         super.awakeFromNib()
         separatorStyle = .none
-        backgroundColor = .clear
     }
 }
 

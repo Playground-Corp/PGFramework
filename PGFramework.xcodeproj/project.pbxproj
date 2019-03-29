@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		8498467A317C6F260C4657C4 /* Pods_PGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81339C92B4B3B6B84462A1A /* Pods_PGFramework.framework */; };
 		D551A783B0CF73955DDE71A9 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62567FB7CD9144A09AF0DB98 /* Pods_Demo.framework */; };
-		F451923122368D1A00EAB3B7 /* NavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921822368D1A00EAB3B7 /* NavigationHeaderView.swift */; };
+		F441E9A72237861A00B178AE /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441E9A62237861A00B178AE /* TopTableViewCell.swift */; };
+		F441E9A92237863700B178AE /* TopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F441E9A82237863700B178AE /* TopTableViewCell.xib */; };
+		F441E9AB223787D800B178AE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441E9AA223787D800B178AE /* UserModel.swift */; };
 		F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */; };
 		F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921C22368D1A00EAB3B7 /* BaseViewController.swift */; };
 		F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */; };
@@ -23,8 +25,8 @@
 		F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922622368D1A00EAB3B7 /* Extensions.swift */; };
 		F451923D22368D1A00EAB3B7 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922722368D1A00EAB3B7 /* Fetcher.swift */; };
 		F451923E22368D1A00EAB3B7 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922A22368D1A00EAB3B7 /* ListModel.swift */; };
-		F451923F22368D1A00EAB3B7 /* NavigationHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F451922F22368D1A00EAB3B7 /* NavigationHeaderView.xib */; };
 		F45DA0D022366F8300288C68 /* PGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F45DA0CE22366F8300288C68 /* PGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F49B1EB72237AFAD00FF1404 /* TopMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4880F22377753007242F2 /* TopMainView.swift */; };
 		F4F487F522376F90007242F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F487F422376F90007242F2 /* AppDelegate.swift */; };
 		F4F487FA22376F90007242F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F487F822376F90007242F2 /* Main.storyboard */; };
 		F4F487FC22376F92007242F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F487FB22376F92007242F2 /* Assets.xcassets */; };
@@ -33,7 +35,6 @@
 		F4F4880522376FC0007242F2 /* PGFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4F4880A22377081007242F2 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4880922377081007242F2 /* TopViewController.swift */; };
 		F4F4880C223770A1007242F2 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F4880B223770A1007242F2 /* TopViewController.xib */; };
-		F4F4881022377753007242F2 /* TopMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4880F22377753007242F2 /* TopMainView.swift */; };
 		F4F4881222377767007242F2 /* TopMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F4881122377767007242F2 /* TopMainView.xib */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +68,9 @@
 		6B24C6F08AE3FB0EE4B0481F /* Pods-PGFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFramework.release.xcconfig"; path = "Target Support Files/Pods-PGFramework/Pods-PGFramework.release.xcconfig"; sourceTree = "<group>"; };
 		7216212DDD8D6865F71B3F61 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B9FCE952F50B11B3B4BDA8E7 /* Pods-PGFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFramework.debug.xcconfig"; path = "Target Support Files/Pods-PGFramework/Pods-PGFramework.debug.xcconfig"; sourceTree = "<group>"; };
-		F451921822368D1A00EAB3B7 /* NavigationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHeaderView.swift; sourceTree = "<group>"; };
+		F441E9A62237861A00B178AE /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
+		F441E9A82237863700B178AE /* TopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableViewCell.xib; sourceTree = "<group>"; };
+		F441E9AA223787D800B178AE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		F451921C22368D1A00EAB3B7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		F451922622368D1A00EAB3B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F451922722368D1A00EAB3B7 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		F451922A22368D1A00EAB3B7 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		F451922F22368D1A00EAB3B7 /* NavigationHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationHeaderView.xib; sourceTree = "<group>"; };
 		F45DA0CB22366F8300288C68 /* PGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DA0CE22366F8300288C68 /* PGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGFramework.h; sourceTree = "<group>"; };
 		F45DA0CF22366F8300288C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,6 +141,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F42143862241205100214729 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F4F4880922377081007242F2 /* TopViewController.swift */,
+				F4F4880B223770A1007242F2 /* TopViewController.xib */,
+				F4F4880F22377753007242F2 /* TopMainView.swift */,
+				F4F4881122377767007242F2 /* TopMainView.xib */,
+				F441E9A62237861A00B178AE /* TopTableViewCell.swift */,
+				F441E9A82237863700B178AE /* TopTableViewCell.xib */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		F42143872241206B00214729 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F441E9AA223787D800B178AE /* UserModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		F451921422368D1A00EAB3B7 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +194,6 @@
 		F451921722368D1A00EAB3B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F451921822368D1A00EAB3B7 /* NavigationHeaderView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -253,7 +275,6 @@
 		F451922E22368D1A00EAB3B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F451922F22368D1A00EAB3B7 /* NavigationHeaderView.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -303,10 +324,8 @@
 				F4F487FB22376F92007242F2 /* Assets.xcassets */,
 				F4F487FD22376F92007242F2 /* LaunchScreen.storyboard */,
 				F4F4880022376F92007242F2 /* Info.plist */,
-				F4F4880922377081007242F2 /* TopViewController.swift */,
-				F4F4880B223770A1007242F2 /* TopViewController.xib */,
-				F4F4880F22377753007242F2 /* TopMainView.swift */,
-				F4F4881122377767007242F2 /* TopMainView.xib */,
+				F42143862241205100214729 /* Top */,
+				F42143872241206B00214729 /* model */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -334,6 +353,7 @@
 				F45DA0C722366F8300288C68 /* Sources */,
 				F45DA0C822366F8300288C68 /* Frameworks */,
 				F45DA0C922366F8300288C68 /* Resources */,
+				F441E9AC22378C8D00B178AE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -408,7 +428,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F451923F22368D1A00EAB3B7 /* NavigationHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +440,7 @@
 				F4F487FF22376F92007242F2 /* LaunchScreen.storyboard in Resources */,
 				F4F487FC22376F92007242F2 /* Assets.xcassets in Resources */,
 				F4F487FA22376F90007242F2 /* Main.storyboard in Resources */,
+				F441E9A92237863700B178AE /* TopTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +508,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F441E9AC22378C8D00B178AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir ${SRCROOT}/.snippets\ncp -r ${SRCROOT}/.snippets/ ~/Library/Developer/Xcode/UserData/CodeSnippets/\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -501,7 +539,6 @@
 				F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */,
 				F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */,
 				F451923B22368D1A00EAB3B7 /* UserDataManager.swift in Sources */,
-				F451923122368D1A00EAB3B7 /* NavigationHeaderView.swift in Sources */,
 				F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */,
 				F451923A22368D1A00EAB3B7 /* AnimatorManager.swift in Sources */,
 				F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */,
@@ -517,8 +554,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F4880A22377081007242F2 /* TopViewController.swift in Sources */,
-				F4F4881022377753007242F2 /* TopMainView.swift in Sources */,
 				F4F487F522376F90007242F2 /* AppDelegate.swift in Sources */,
+				F441E9AB223787D800B178AE /* UserModel.swift in Sources */,
+				F441E9A72237861A00B178AE /* TopTableViewCell.swift in Sources */,
+				F49B1EB72237AFAD00FF1404 /* TopMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>modelParse</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static func subParse(data: [String: Any], key: String) -&gt; [&lt;#SubModel#&gt;] {
+        var result: [&lt;#SubModel#&gt;] = []
+        if let objects = data[key] as? [[String: AnyObject]] {
+            let _ = objects.map { object in
+                let subModel: &lt;#SubModel#&gt; = &lt;#SubModel#&gt;.parse(data: object)
+                result += [subModel]
+            }
+        }
+        return result
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1F9453A0-C2FE-4616-A61C-EAAF39905DB8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>modelParse</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

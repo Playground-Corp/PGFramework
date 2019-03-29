@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>controller</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import PGFramework
+
+
+// MARK: - Property
+class &lt;#Class#&gt;: &lt;#Super Class#&gt; {
+    
+}
+
+// MARK: - Life cycle
+extension &lt;#Class#&gt; {
+    override func loadView() {
+        super.loadView()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidload()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+}
+
+// MARK: - Protocol
+extension &lt;#Class#&gt; {
+    
+}
+
+// MARK: - method
+extension &lt;#Class#&gt; {
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>46AD6FD4-6AAD-4650-8093-D169F8726F9A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Class controller set</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

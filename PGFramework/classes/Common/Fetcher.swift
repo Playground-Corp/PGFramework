@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireImage
 
 public struct Const {
-    static let HOST: String = "https://appcookingecmodel.work/api/"
+    static let HOST: String = "https://"
     static let TIME_INTERVAL: TimeInterval = 10.0
 }
 

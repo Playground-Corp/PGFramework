@@ -1,5 +1,5 @@
 //
-//  TopMainView.swift
+//  TopTableViewCell.swift
 //  Demo
 //
 //  Created by Hiroki Umatani on 2019/03/12.
@@ -7,33 +7,35 @@
 //
 
 import UIKit
+
 import PGFramework
 
-protocol TopMainViewDelegate: NSObjectProtocol {
+
+protocol TopTableViewCellDelegate: NSObjectProtocol{
 
 }
 
-extension TopMainViewDelegate {
+extension TopTableViewCellDelegate {
 
 }
 // MARK: - Property
-class TopMainView: BaseView {
-    weak var delegate: TopMainViewDelegate? = nil
+class TopTableViewCell: BaseTableViewCell {
+    weak var delegate: TopTableViewCellDelegate? = nil
 }
 
 // MARK: - Life cycle
-extension TopMainView {
+extension TopTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 }
 
 // MARK: - Protocol
-extension TopMainView {
+extension TopTableViewCell {
 
 }
 
 // MARK: - method
-extension TopMainView {
+extension TopTableViewCell {
 
 }
