@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopViewController" customModule="Demo" customModuleProvider="target">
             <connections>
+                <outlet property="topMainView" destination="b0y-0L-VYY" id="5YU-Ay-uP4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2Tr-e3-J1J"/>
             </connections>
         </placeholder>

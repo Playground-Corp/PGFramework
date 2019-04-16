@@ -13,29 +13,30 @@ import PGFramework
 
 // MARK: - Property
 class TopViewController: BaseViewController {
+    @IBOutlet weak var topMainView: TopMainView!
+    var topViewListModel: ListModel<TopViewModel> = TopViewModel.loadPropertyList()
 }
 
 // MARK: - Life cycle
 extension TopViewController {
     override func loadView() {
         super.loadView()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        setDelegates()
+        topMainView.updateView(topViewListModel: topViewListModel)
     }
 }
 
 // MARK: - Protocol
-extension TopViewController {
-
+extension TopViewController: TopMainViewDelegate {
+    func touchedCell(topViewModel: TopViewModel) {
+        let toastViewController = ToastViewController()
+        transitionViewController(from: self, to: toastViewController)
+    }
 }
 
 // MARK: - method
 extension TopViewController {
-
+    private func setDelegates() {
+        topMainView.delegate = self
+    }
 }

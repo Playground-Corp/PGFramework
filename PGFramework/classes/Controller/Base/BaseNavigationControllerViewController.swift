@@ -17,6 +17,7 @@ open class BaseNavigationController: UINavigationController {
 extension BaseNavigationController {
     open override func loadView() {
         super.loadView()
+        isNavigationBarHidden = true
     }
     
     open override func didReceiveMemoryWarning() {

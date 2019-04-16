@@ -57,6 +57,7 @@ extension BaseViewController: UITabBarControllerDelegate {
     public func tabBarController(_ tabBarController: UITabBarController,
                           animationControllerForTransitionFrom fromVC: UIViewController,
                           to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animatorManager.navigationType = .none
         return animatorManager
     }
 }

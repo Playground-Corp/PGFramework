@@ -159,7 +159,7 @@ public func randomString(length: Int) -> String {
     return randomString
 }
 
-func getUUID() -> String? {
+public func getUUID() -> String? {
     var result: String?
     if let vendor = UIDevice.current.identifierForVendor {
         result = vendor.uuidString
@@ -167,12 +167,12 @@ func getUUID() -> String? {
     return result
 }
 
-func getOS() -> String {
+public func getOS() -> String {
     let result = UIDevice.current.systemVersion
     return result
 }
 
-func getModel() -> String {
+public func getModel() -> String {
     var systemInfo = utsname()
     uname(&systemInfo)
     let machineMirror = Mirror(reflecting: systemInfo.machine)
