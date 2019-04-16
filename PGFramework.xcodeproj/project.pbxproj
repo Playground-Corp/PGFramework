@@ -25,6 +25,14 @@
 		F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922622368D1A00EAB3B7 /* Extensions.swift */; };
 		F451923D22368D1A00EAB3B7 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922722368D1A00EAB3B7 /* Fetcher.swift */; };
 		F451923E22368D1A00EAB3B7 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922A22368D1A00EAB3B7 /* ListModel.swift */; };
+		F45C92F4225322E6003E4722 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C92F3225322E6003E4722 /* TopViewModel.swift */; };
+		F45C92F6225325FB003E4722 /* TopViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45C92F5225325FB003E4722 /* TopViewData.plist */; };
+		F45C92FB22532F12003E4722 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C92FA22532F12003E4722 /* ToastViewController.swift */; };
+		F45C92FD22532F34003E4722 /* ToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45C92FC22532F34003E4722 /* ToastViewController.xib */; };
+		F45C92FF22532F62003E4722 /* ToastMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C92FE22532F62003E4722 /* ToastMainView.swift */; };
+		F45C930122532F7E003E4722 /* ToastMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45C930022532F7E003E4722 /* ToastMainView.xib */; };
+		F45C93032253311C003E4722 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C93022253311C003E4722 /* ToastView.swift */; };
+		F45C930522533139003E4722 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45C930422533139003E4722 /* ToastView.xib */; };
 		F45DA0D022366F8300288C68 /* PGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F45DA0CE22366F8300288C68 /* PGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F49B1EB72237AFAD00FF1404 /* TopMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4880F22377753007242F2 /* TopMainView.swift */; };
 		F4F487F522376F90007242F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F487F422376F90007242F2 /* AppDelegate.swift */; };
@@ -84,6 +92,14 @@
 		F451922622368D1A00EAB3B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F451922722368D1A00EAB3B7 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		F451922A22368D1A00EAB3B7 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		F45C92F3225322E6003E4722 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		F45C92F5225325FB003E4722 /* TopViewData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TopViewData.plist; sourceTree = "<group>"; };
+		F45C92FA22532F12003E4722 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
+		F45C92FC22532F34003E4722 /* ToastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastViewController.xib; sourceTree = "<group>"; };
+		F45C92FE22532F62003E4722 /* ToastMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMainView.swift; sourceTree = "<group>"; };
+		F45C930022532F7E003E4722 /* ToastMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastMainView.xib; sourceTree = "<group>"; };
+		F45C93022253311C003E4722 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		F45C930422533139003E4722 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
 		F45DA0CB22366F8300288C68 /* PGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DA0CE22366F8300288C68 /* PGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGFramework.h; sourceTree = "<group>"; };
 		F45DA0CF22366F8300288C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,12 +160,14 @@
 		F42143862241205100214729 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				F4F4880922377081007242F2 /* TopViewController.swift */,
-				F4F4880B223770A1007242F2 /* TopViewController.xib */,
-				F4F4880F22377753007242F2 /* TopMainView.swift */,
-				F4F4881122377767007242F2 /* TopMainView.xib */,
+				F45C92F822532E3A003E4722 /* New Group */,
+				F45C92F722532E33003E4722 /* Model */,
 				F441E9A62237861A00B178AE /* TopTableViewCell.swift */,
 				F441E9A82237863700B178AE /* TopTableViewCell.xib */,
+				F4F4880F22377753007242F2 /* TopMainView.swift */,
+				F4F4881122377767007242F2 /* TopMainView.xib */,
+				F4F4880922377081007242F2 /* TopViewController.swift */,
+				F4F4880B223770A1007242F2 /* TopViewController.xib */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -286,6 +304,35 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		F45C92F722532E33003E4722 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F45C92F3225322E6003E4722 /* TopViewModel.swift */,
+				F45C92F5225325FB003E4722 /* TopViewData.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F45C92F822532E3A003E4722 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F45C92F922532EFC003E4722 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				F45C92FE22532F62003E4722 /* ToastMainView.swift */,
+				F45C930022532F7E003E4722 /* ToastMainView.xib */,
+				F45C92FA22532F12003E4722 /* ToastViewController.swift */,
+				F45C92FC22532F34003E4722 /* ToastViewController.xib */,
+				F45C93022253311C003E4722 /* ToastView.swift */,
+				F45C930422533139003E4722 /* ToastView.xib */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		F45DA0C122366F8300288C68 = {
 			isa = PBXGroup;
 			children = (
@@ -319,12 +366,13 @@
 		F4F487F322376F90007242F2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F42143862241205100214729 /* Top */,
+				F45C92F922532EFC003E4722 /* Toast */,
 				F4F487F422376F90007242F2 /* AppDelegate.swift */,
 				F4F487F822376F90007242F2 /* Main.storyboard */,
 				F4F487FB22376F92007242F2 /* Assets.xcassets */,
 				F4F487FD22376F92007242F2 /* LaunchScreen.storyboard */,
 				F4F4880022376F92007242F2 /* Info.plist */,
-				F42143862241205100214729 /* Top */,
 				F42143872241206B00214729 /* model */,
 			);
 			path = Demo;
@@ -435,9 +483,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45C930122532F7E003E4722 /* ToastMainView.xib in Resources */,
 				F4F4881222377767007242F2 /* TopMainView.xib in Resources */,
 				F4F4880C223770A1007242F2 /* TopViewController.xib in Resources */,
+				F45C92FD22532F34003E4722 /* ToastViewController.xib in Resources */,
+				F45C930522533139003E4722 /* ToastView.xib in Resources */,
 				F4F487FF22376F92007242F2 /* LaunchScreen.storyboard in Resources */,
+				F45C92F6225325FB003E4722 /* TopViewData.plist in Resources */,
 				F4F487FC22376F92007242F2 /* Assets.xcassets in Resources */,
 				F4F487FA22376F90007242F2 /* Main.storyboard in Resources */,
 				F441E9A92237863700B178AE /* TopTableViewCell.xib in Resources */,
@@ -553,10 +605,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45C92FB22532F12003E4722 /* ToastViewController.swift in Sources */,
+				F45C92FF22532F62003E4722 /* ToastMainView.swift in Sources */,
 				F4F4880A22377081007242F2 /* TopViewController.swift in Sources */,
 				F4F487F522376F90007242F2 /* AppDelegate.swift in Sources */,
 				F441E9AB223787D800B178AE /* UserModel.swift in Sources */,
 				F441E9A72237861A00B178AE /* TopTableViewCell.swift in Sources */,
+				F45C92F4225322E6003E4722 /* TopViewModel.swift in Sources */,
+				F45C93032253311C003E4722 /* ToastView.swift in Sources */,
 				F49B1EB72237AFAD00FF1404 /* TopMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

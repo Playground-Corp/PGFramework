@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import PGFramework
 
 
@@ -21,21 +20,36 @@ extension TopTableViewCellDelegate {
 // MARK: - Property
 class TopTableViewCell: BaseTableViewCell {
     weak var delegate: TopTableViewCellDelegate? = nil
+    @IBOutlet weak var titleLabel: UILabel!
+    var topViewModel: TopViewModel = TopViewModel()
 }
 
 // MARK: - Life cycle
 extension TopTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setDelegates()
+        loadViews()
     }
 }
 
 // MARK: - Protocol
-extension TopTableViewCell {
+extension TopTableViewCell: TopMainViewDelegate {
 
 }
 
 // MARK: - method
 extension TopTableViewCell {
+    func updateView(topViewModel: TopViewModel) {
+        self.topViewModel = topViewModel
+        titleLabel.text = topViewModel.title
+    }
 
+    private func setDelegates() {
+
+    }
+
+    private func loadViews() {
+
+    }
 }
