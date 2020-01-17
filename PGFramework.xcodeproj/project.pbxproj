@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		8498467A317C6F260C4657C4 /* Pods_PGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81339C92B4B3B6B84462A1A /* Pods_PGFramework.framework */; };
 		D551A783B0CF73955DDE71A9 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62567FB7CD9144A09AF0DB98 /* Pods_Demo.framework */; };
-		F441E9A72237861A00B178AE /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441E9A62237861A00B178AE /* TopTableViewCell.swift */; };
-		F441E9A92237863700B178AE /* TopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F441E9A82237863700B178AE /* TopTableViewCell.xib */; };
-		F441E9AB223787D800B178AE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441E9AA223787D800B178AE /* UserModel.swift */; };
 		F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */; };
 		F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921C22368D1A00EAB3B7 /* BaseViewController.swift */; };
 		F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */; };
@@ -23,27 +20,13 @@
 		F451923A22368D1A00EAB3B7 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922422368D1A00EAB3B7 /* AnimatorManager.swift */; };
 		F451923B22368D1A00EAB3B7 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922522368D1A00EAB3B7 /* UserDataManager.swift */; };
 		F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922622368D1A00EAB3B7 /* Extensions.swift */; };
-		F451923D22368D1A00EAB3B7 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922722368D1A00EAB3B7 /* Fetcher.swift */; };
-		F451923E22368D1A00EAB3B7 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922A22368D1A00EAB3B7 /* ListModel.swift */; };
-		F45C92F4225322E6003E4722 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C92F3225322E6003E4722 /* TopViewModel.swift */; };
-		F45C92F6225325FB003E4722 /* TopViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45C92F5225325FB003E4722 /* TopViewData.plist */; };
-		F45C92FB22532F12003E4722 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C92FA22532F12003E4722 /* ToastViewController.swift */; };
-		F45C92FD22532F34003E4722 /* ToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45C92FC22532F34003E4722 /* ToastViewController.xib */; };
-		F45C92FF22532F62003E4722 /* ToastMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C92FE22532F62003E4722 /* ToastMainView.swift */; };
-		F45C930122532F7E003E4722 /* ToastMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45C930022532F7E003E4722 /* ToastMainView.xib */; };
-		F45C93032253311C003E4722 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C93022253311C003E4722 /* ToastView.swift */; };
-		F45C930522533139003E4722 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45C930422533139003E4722 /* ToastView.xib */; };
 		F45DA0D022366F8300288C68 /* PGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F45DA0CE22366F8300288C68 /* PGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F49B1EB72237AFAD00FF1404 /* TopMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4880F22377753007242F2 /* TopMainView.swift */; };
 		F4F487F522376F90007242F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F487F422376F90007242F2 /* AppDelegate.swift */; };
 		F4F487FA22376F90007242F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F487F822376F90007242F2 /* Main.storyboard */; };
 		F4F487FC22376F92007242F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F487FB22376F92007242F2 /* Assets.xcassets */; };
 		F4F487FF22376F92007242F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F487FD22376F92007242F2 /* LaunchScreen.storyboard */; };
 		F4F4880422376FC0007242F2 /* PGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; };
 		F4F4880522376FC0007242F2 /* PGFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F4F4880A22377081007242F2 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4880922377081007242F2 /* TopViewController.swift */; };
-		F4F4880C223770A1007242F2 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F4880B223770A1007242F2 /* TopViewController.xib */; };
-		F4F4881222377767007242F2 /* TopMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F4881122377767007242F2 /* TopMainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +59,6 @@
 		6B24C6F08AE3FB0EE4B0481F /* Pods-PGFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFramework.release.xcconfig"; path = "Target Support Files/Pods-PGFramework/Pods-PGFramework.release.xcconfig"; sourceTree = "<group>"; };
 		7216212DDD8D6865F71B3F61 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B9FCE952F50B11B3B4BDA8E7 /* Pods-PGFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFramework.debug.xcconfig"; path = "Target Support Files/Pods-PGFramework/Pods-PGFramework.debug.xcconfig"; sourceTree = "<group>"; };
-		F441E9A62237861A00B178AE /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
-		F441E9A82237863700B178AE /* TopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableViewCell.xib; sourceTree = "<group>"; };
-		F441E9AA223787D800B178AE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		F451921C22368D1A00EAB3B7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -90,16 +70,6 @@
 		F451922422368D1A00EAB3B7 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
 		F451922522368D1A00EAB3B7 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		F451922622368D1A00EAB3B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F451922722368D1A00EAB3B7 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
-		F451922A22368D1A00EAB3B7 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		F45C92F3225322E6003E4722 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
-		F45C92F5225325FB003E4722 /* TopViewData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TopViewData.plist; sourceTree = "<group>"; };
-		F45C92FA22532F12003E4722 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
-		F45C92FC22532F34003E4722 /* ToastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastViewController.xib; sourceTree = "<group>"; };
-		F45C92FE22532F62003E4722 /* ToastMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMainView.swift; sourceTree = "<group>"; };
-		F45C930022532F7E003E4722 /* ToastMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastMainView.xib; sourceTree = "<group>"; };
-		F45C93022253311C003E4722 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
-		F45C930422533139003E4722 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
 		F45DA0CB22366F8300288C68 /* PGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DA0CE22366F8300288C68 /* PGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGFramework.h; sourceTree = "<group>"; };
 		F45DA0CF22366F8300288C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,10 +79,6 @@
 		F4F487FB22376F92007242F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F487FE22376F92007242F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4F4880022376F92007242F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4F4880922377081007242F2 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		F4F4880B223770A1007242F2 /* TopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
-		F4F4880F22377753007242F2 /* TopMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMainView.swift; sourceTree = "<group>"; };
-		F4F4881122377767007242F2 /* TopMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopMainView.xib; sourceTree = "<group>"; };
 		F81339C92B4B3B6B84462A1A /* Pods_PGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,25 +123,9 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F42143862241205100214729 /* Top */ = {
-			isa = PBXGroup;
-			children = (
-				F45C92F822532E3A003E4722 /* New Group */,
-				F45C92F722532E33003E4722 /* Model */,
-				F441E9A62237861A00B178AE /* TopTableViewCell.swift */,
-				F441E9A82237863700B178AE /* TopTableViewCell.xib */,
-				F4F4880F22377753007242F2 /* TopMainView.swift */,
-				F4F4881122377767007242F2 /* TopMainView.xib */,
-				F4F4880922377081007242F2 /* TopViewController.swift */,
-				F4F4880B223770A1007242F2 /* TopViewController.xib */,
-			);
-			path = Top;
-			sourceTree = "<group>";
-		};
 		F42143872241206B00214729 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				F441E9AA223787D800B178AE /* UserModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -183,47 +133,13 @@
 		F451921422368D1A00EAB3B7 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				F451921522368D1A00EAB3B7 /* Controller */,
+				F451921522368D1A00EAB3B7 /* Base */,
 				F451922222368D1A00EAB3B7 /* Common */,
-				F451922822368D1A00EAB3B7 /* Model */,
-				F451922B22368D1A00EAB3B7 /* View */,
 			);
 			path = classes;
 			sourceTree = "<group>";
 		};
-		F451921522368D1A00EAB3B7 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F451921622368D1A00EAB3B7 /* Sub */,
-				F451921922368D1A00EAB3B7 /* Main */,
-				F451921A22368D1A00EAB3B7 /* Base */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F451921622368D1A00EAB3B7 /* Sub */ = {
-			isa = PBXGroup;
-			children = (
-				F451921722368D1A00EAB3B7 /* Common */,
-			);
-			path = Sub;
-			sourceTree = "<group>";
-		};
-		F451921722368D1A00EAB3B7 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		F451921922368D1A00EAB3B7 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		F451921A22368D1A00EAB3B7 /* Base */ = {
+		F451921522368D1A00EAB3B7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */,
@@ -244,93 +160,8 @@
 				F451922422368D1A00EAB3B7 /* AnimatorManager.swift */,
 				F451922522368D1A00EAB3B7 /* UserDataManager.swift */,
 				F451922622368D1A00EAB3B7 /* Extensions.swift */,
-				F451922722368D1A00EAB3B7 /* Fetcher.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		F451922822368D1A00EAB3B7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F451922922368D1A00EAB3B7 /* Base */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F451922922368D1A00EAB3B7 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				F451922A22368D1A00EAB3B7 /* ListModel.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		F451922B22368D1A00EAB3B7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F451922C22368D1A00EAB3B7 /* wireframe */,
-				F451922D22368D1A00EAB3B7 /* Sub */,
-				F451923022368D1A00EAB3B7 /* Main */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F451922C22368D1A00EAB3B7 /* wireframe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = wireframe;
-			sourceTree = "<group>";
-		};
-		F451922D22368D1A00EAB3B7 /* Sub */ = {
-			isa = PBXGroup;
-			children = (
-				F451922E22368D1A00EAB3B7 /* Common */,
-			);
-			path = Sub;
-			sourceTree = "<group>";
-		};
-		F451922E22368D1A00EAB3B7 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		F451923022368D1A00EAB3B7 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		F45C92F722532E33003E4722 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F45C92F3225322E6003E4722 /* TopViewModel.swift */,
-				F45C92F5225325FB003E4722 /* TopViewData.plist */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F45C92F822532E3A003E4722 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		F45C92F922532EFC003E4722 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				F45C92FE22532F62003E4722 /* ToastMainView.swift */,
-				F45C930022532F7E003E4722 /* ToastMainView.xib */,
-				F45C92FA22532F12003E4722 /* ToastViewController.swift */,
-				F45C92FC22532F34003E4722 /* ToastViewController.xib */,
-				F45C93022253311C003E4722 /* ToastView.swift */,
-				F45C930422533139003E4722 /* ToastView.xib */,
-			);
-			path = Toast;
 			sourceTree = "<group>";
 		};
 		F45DA0C122366F8300288C68 = {
@@ -366,8 +197,6 @@
 		F4F487F322376F90007242F2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				F42143862241205100214729 /* Top */,
-				F45C92F922532EFC003E4722 /* Toast */,
 				F4F487F422376F90007242F2 /* AppDelegate.swift */,
 				F4F487F822376F90007242F2 /* Main.storyboard */,
 				F4F487FB22376F92007242F2 /* Assets.xcassets */,
@@ -483,16 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45C930122532F7E003E4722 /* ToastMainView.xib in Resources */,
-				F4F4881222377767007242F2 /* TopMainView.xib in Resources */,
-				F4F4880C223770A1007242F2 /* TopViewController.xib in Resources */,
-				F45C92FD22532F34003E4722 /* ToastViewController.xib in Resources */,
-				F45C930522533139003E4722 /* ToastView.xib in Resources */,
 				F4F487FF22376F92007242F2 /* LaunchScreen.storyboard in Resources */,
-				F45C92F6225325FB003E4722 /* TopViewData.plist in Resources */,
 				F4F487FC22376F92007242F2 /* Assets.xcassets in Resources */,
 				F4F487FA22376F90007242F2 /* Main.storyboard in Resources */,
-				F441E9A92237863700B178AE /* TopTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,8 +417,6 @@
 				F451923A22368D1A00EAB3B7 /* AnimatorManager.swift in Sources */,
 				F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */,
 				F451923822368D1A00EAB3B7 /* BaseView.swift in Sources */,
-				F451923E22368D1A00EAB3B7 /* ListModel.swift in Sources */,
-				F451923D22368D1A00EAB3B7 /* Fetcher.swift in Sources */,
 				F451923922368D1A00EAB3B7 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,15 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45C92FB22532F12003E4722 /* ToastViewController.swift in Sources */,
-				F45C92FF22532F62003E4722 /* ToastMainView.swift in Sources */,
-				F4F4880A22377081007242F2 /* TopViewController.swift in Sources */,
 				F4F487F522376F90007242F2 /* AppDelegate.swift in Sources */,
-				F441E9AB223787D800B178AE /* UserModel.swift in Sources */,
-				F441E9A72237861A00B178AE /* TopTableViewCell.swift in Sources */,
-				F45C92F4225322E6003E4722 /* TopViewModel.swift in Sources */,
-				F45C93032253311C003E4722 /* ToastView.swift in Sources */,
-				F49B1EB72237AFAD00FF1404 /* TopMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
