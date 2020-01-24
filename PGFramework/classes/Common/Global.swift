@@ -9,7 +9,7 @@
 
 import UIKit
 
-public let WIDTH: CGFloat = {
+public let SCREEN_WIDTH: CGFloat = {
     var result: CGFloat = 0.0
     if let first = UIApplication.shared.windows.first {
         result = first.frame.width
@@ -17,7 +17,7 @@ public let WIDTH: CGFloat = {
     return result
 }()
 
-public let HEIGHT: CGFloat = {
+public let SCREEN_HEIGHT: CGFloat = {
     var result: CGFloat = 0.0
     if let first = UIApplication.shared.windows.first {
         result = first.frame.height
@@ -54,6 +54,8 @@ public func transitionStoryboard(name: String) {
 }
 
 public func loadViewFromXib(withOwner: Any) -> [Any]? {
+
+
     let name = getClassName(fromObject: withOwner)
     let nib: UINib = UINib.init(nibName: name, bundle: nil)
     let result: [Any]? = nib.instantiate(withOwner: withOwner, options: nil)
@@ -74,7 +76,7 @@ public func loadCollectionViewCellFromXib(collectionView: UICollectionView, cell
 public func setCollectionViewLayout(collectionView: UICollectionView, columnCount: Double, heithRatio: Double, direction: UICollectionView.ScrollDirection) -> Double {
     let flowLayout = UICollectionViewFlowLayout()
     let margin: CGFloat = 0.0
-    let cellWidth = Double(WIDTH) / columnCount
+    let cellWidth = Double(collectionView.frame.width) / columnCount
     let cellHeight = cellWidth * heithRatio
     flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     flowLayout.scrollDirection = direction
@@ -147,7 +149,7 @@ public func parsePlist(_ fileName: String) -> [[String: Any]]? {
     }
 }
 
-public func randomString(length: Int) -> String {
+public func makeRandomString(length: Int) -> String {
     let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     let len = UInt32(letters.length)
     var randomString = ""
@@ -172,7 +174,7 @@ public func getOS() -> String {
     return result
 }
 
-public func getModel() -> String {
+public func getSystemModel() -> String {
     var systemInfo = utsname()
     uname(&systemInfo)
     let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -238,3 +240,4 @@ public func getModel() -> String {
     }
     return mapToDevice(identifier: identifier)
 }
+

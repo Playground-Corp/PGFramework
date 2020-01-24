@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 public extension UIColor {
     convenience init(hex: String, alpha: CGFloat) {
         let v = hex.map { String($0) } + Array(repeating: "0", count: max(6 - hex.count, 0))

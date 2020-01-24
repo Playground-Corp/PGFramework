@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGFramework"
-  s.version      = "0.2.1"
+  s.version      = "1.0.0"
   s.summary      = "This is the develop fast tool for Playground, Inc."
   s.description  = <<-DESC
                     - Create view and controller

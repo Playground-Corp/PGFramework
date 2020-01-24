@@ -1,16 +1,16 @@
 //
 //  BaseNavigationController.swift
-//  Learning
+//  PGFramework
 //
-//  Created by Playground, Inc. on 2018/08/02.
-//  Copyright © 2018年 Playground, Inc.. All rights reserved.
+//  Created by Hiroki Umatani on 2020/01/17.
+//  Copyright © 2020 Playground. All rights reserved.
 //
 
 import UIKit
 
 // MARK: - Property
 open class BaseNavigationController: UINavigationController {
-    
+
 }
 
 // MARK: - Life cycle
@@ -19,7 +19,7 @@ extension BaseNavigationController {
         super.loadView()
         isNavigationBarHidden = true
     }
-    
+
     open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -27,10 +27,11 @@ extension BaseNavigationController {
 
 // MARK: - Protocol
 extension BaseNavigationController {
-    
+
 }
 
 // MARK: - Method
 extension BaseNavigationController {
-    
+
 }
+
