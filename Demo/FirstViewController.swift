@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
 import PGFramework
 
 
 // MARK: - Property
 class FirstViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
 
 }
 
@@ -20,10 +20,15 @@ class FirstViewController: BaseViewController {
 extension FirstViewController {
     override func loadView() {
         super.loadView()
+        headerView.delegate = self
+        headerView.updateLeft(text: "left")
+        headerView.updateCenter(text: "center")
+        headerView.updateRight(text: "right")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +37,7 @@ extension FirstViewController {
 }
 
 // MARK: - Protocol
-extension FirstViewController {
+extension FirstViewController: HeaderViewDelegate {
 
 }
 

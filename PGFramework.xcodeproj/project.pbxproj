@@ -22,6 +22,8 @@
 		F45DA0D022366F8300288C68 /* PGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F45DA0CE22366F8300288C68 /* PGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4B7D62B23DABB75007456D3 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7D62A23DABB75007456D3 /* Fetcher.swift */; };
 		F4B7D62D23DABB87007456D3 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7D62C23DABB87007456D3 /* ListModel.swift */; };
+		F4B7D65423DACB32007456D3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7D65223DACB32007456D3 /* HeaderView.swift */; };
+		F4B7D65523DACB32007456D3 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B7D65323DACB32007456D3 /* HeaderView.xib */; };
 		F4C1EEA123D1960F00B3178A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1EEA023D1960F00B3178A /* FirstViewController.swift */; };
 		F4C1EEA323D1964C00B3178A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C1EEA223D1964C00B3178A /* FirstViewController.xib */; };
 		F4C1EEA523D196F500B3178A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1EEA423D196F500B3178A /* BaseNavigationController.swift */; };
@@ -78,6 +80,8 @@
 		F45DA0CF22366F8300288C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B7D62A23DABB75007456D3 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		F4B7D62C23DABB87007456D3 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		F4B7D65223DACB32007456D3 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F4B7D65323DACB32007456D3 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		F4C1EEA023D1960F00B3178A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F4C1EEA223D1964C00B3178A /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		F4C1EEA423D196F500B3178A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		F451922222368D1A00EAB3B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F4B7D65223DACB32007456D3 /* HeaderView.swift */,
+				F4B7D65323DACB32007456D3 /* HeaderView.xib */,
 				F4B7D62C23DABB87007456D3 /* ListModel.swift */,
 				F4B7D62A23DABB75007456D3 /* Fetcher.swift */,
 				F451922322368D1A00EAB3B7 /* Global.swift */,
@@ -309,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B7D65523DACB32007456D3 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +432,7 @@
 				F4B7D62D23DABB87007456D3 /* ListModel.swift in Sources */,
 				F451923822368D1A00EAB3B7 /* BaseView.swift in Sources */,
 				F451923922368D1A00EAB3B7 /* Global.swift in Sources */,
+				F4B7D65423DACB32007456D3 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

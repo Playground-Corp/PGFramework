@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/Playground-Corp/PGFramework.git", :tag => s.version }
   s.source_files  = "PGFramework/classes/{Base,Common}/**/*.swift"
+  s.resources    = 'PGFramework/classes/{Base,Common}/**/*.xib'
   s.dependency 'Alamofire'
   s.dependency 'AlamofireImage'
   s.requires_arc = true

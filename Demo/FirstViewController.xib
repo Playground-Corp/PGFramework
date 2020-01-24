@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="Demo" customModuleProvider="target">
             <connections>
+                <outlet property="headerView" destination="r4B-TK-5lQ" id="KkJ-lf-gd3"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4xi-hU-lVG"/>
             </connections>
         </placeholder>
@@ -17,7 +18,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4B-TK-5lQ" customClass="HeaderView" customModule="PGFramework">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="hEj-95-89A"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r4B-TK-5lQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2XW-xY-h5U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r4B-TK-5lQ" secondAttribute="trailing" id="7sI-Af-UD7"/>
+                <constraint firstItem="r4B-TK-5lQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KMZ-ue-Wzj"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="87"/>
         </view>
