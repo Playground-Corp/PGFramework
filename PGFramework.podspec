@@ -7,13 +7,14 @@ Pod::Spec.new do |s|
                     - Common functions
                    DESC
   s.swift_version = '4.0'
-  s.homepage     = "https://github.com/Playground-Corp/PGFramework"
+  s.homepage     = "https://playground.style"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Playground, Inc." => "develop@playground.style" }
   s.social_media_url   = "https://www.facebook.com/PlaygroundCo2019/"
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/Playground-Corp/PGFramework.git", :tag => s.version }
   s.source_files  = "PGFramework/classes/{Base,Common}/**/*.swift"
+  s.frameworks   = 'Alamofire', 'AlamofireImage'
   s.requires_arc = true
 end
 
