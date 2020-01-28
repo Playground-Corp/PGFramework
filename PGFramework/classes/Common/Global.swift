@@ -1,6 +1,5 @@
 //
 //  Global.swift
-//  Learning
 //
 //  Created by Playground, Inc. on 2018/09/17.
 //  Copyright © 2018 Playground, Inc.. All rights reserved.
@@ -8,6 +7,7 @@
 
 
 import UIKit
+import Security
 
 public let SCREEN_WIDTH: CGFloat = {
     var result: CGFloat = 0.0
@@ -73,11 +73,11 @@ public func loadCollectionViewCellFromXib(collectionView: UICollectionView, cell
     collectionView.register(nib, forCellWithReuseIdentifier: cellName)
 }
 
-public func setCollectionViewLayout(collectionView: UICollectionView, columnCount: Double, heithRatio: Double, direction: UICollectionView.ScrollDirection) -> Double {
+public func setCollectionViewLayout(collectionView: UICollectionView, columnCount: Double, heigthRatio: Double, direction: UICollectionView.ScrollDirection) -> Double {
     let flowLayout = UICollectionViewFlowLayout()
     let margin: CGFloat = 0.0
     let cellWidth = Double(collectionView.frame.width) / columnCount
-    let cellHeight = cellWidth * heithRatio
+    let cellHeight = cellWidth * heigthRatio
     flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     flowLayout.scrollDirection = direction
     flowLayout.minimumInteritemSpacing = margin

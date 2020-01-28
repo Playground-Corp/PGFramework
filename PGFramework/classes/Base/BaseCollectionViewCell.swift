@@ -1,6 +1,5 @@
 //
 //  BaseCollectionViewCell.swift
-//  Sample2
 //
 //  Created by Hiroki Umatani on 2019/02/13.
 //  Copyright © 2019 Playground. All rights reserved.

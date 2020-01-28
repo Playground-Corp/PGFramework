@@ -1,6 +1,5 @@
 //
 //  Extensions.swift
-//  Learning
 //
 //  Created by Playground, Inc. on 2018/08/02.
 //  Copyright © 2018年 Engineer. All rights reserved.

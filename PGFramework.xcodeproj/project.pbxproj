@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8498467A317C6F260C4657C4 /* Pods_PGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81339C92B4B3B6B84462A1A /* Pods_PGFramework.framework */; };
 		D551A783B0CF73955DDE71A9 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62567FB7CD9144A09AF0DB98 /* Pods_Demo.framework */; };
+		F42E9CD123E0078000496DE9 /* PGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; };
+		F42E9CD223E0078000496DE9 /* PGFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F42E9CDF23E036C700496DE9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9CDE23E036C700496DE9 /* MenuView.swift */; };
+		F42E9CE123E036CE00496DE9 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9CE023E036CE00496DE9 /* MenuView.xib */; };
+		F42E9CE423E0451F00496DE9 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9CE223E0451F00496DE9 /* MenuTableViewCell.swift */; };
+		F42E9CE523E0451F00496DE9 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9CE323E0451F00496DE9 /* MenuTableViewCell.xib */; };
 		F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */; };
 		F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921C22368D1A00EAB3B7 /* BaseViewController.swift */; };
 		F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */; };
@@ -31,12 +37,10 @@
 		F4F487FA22376F90007242F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F487F822376F90007242F2 /* Main.storyboard */; };
 		F4F487FC22376F92007242F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F487FB22376F92007242F2 /* Assets.xcassets */; };
 		F4F487FF22376F92007242F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F487FD22376F92007242F2 /* LaunchScreen.storyboard */; };
-		F4F4880422376FC0007242F2 /* PGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; };
-		F4F4880522376FC0007242F2 /* PGFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45DA0CB22366F8300288C68 /* PGFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F4F4880622376FC0007242F2 /* PBXContainerItemProxy */ = {
+		F42E9CD323E0078000496DE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F45DA0C222366F8300288C68 /* Project object */;
 			proxyType = 1;
@@ -46,13 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F4F4880822376FC1007242F2 /* Embed Frameworks */ = {
+		F42E9CD523E0078000496DE9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F4F4880522376FC0007242F2 /* PGFramework.framework in Embed Frameworks */,
+				F42E9CD223E0078000496DE9 /* PGFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,10 @@
 		6B24C6F08AE3FB0EE4B0481F /* Pods-PGFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFramework.release.xcconfig"; path = "Target Support Files/Pods-PGFramework/Pods-PGFramework.release.xcconfig"; sourceTree = "<group>"; };
 		7216212DDD8D6865F71B3F61 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B9FCE952F50B11B3B4BDA8E7 /* Pods-PGFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGFramework.debug.xcconfig"; path = "Target Support Files/Pods-PGFramework/Pods-PGFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		F42E9CDE23E036C700496DE9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		F42E9CE023E036CE00496DE9 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		F42E9CE223E0451F00496DE9 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F42E9CE323E0451F00496DE9 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		F451921C22368D1A00EAB3B7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F4880422376FC0007242F2 /* PGFramework.framework in Frameworks */,
+				F42E9CD123E0078000496DE9 /* PGFramework.framework in Frameworks */,
 				D551A783B0CF73955DDE71A9 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,14 +169,18 @@
 		F451922222368D1A00EAB3B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F4B7D65223DACB32007456D3 /* HeaderView.swift */,
-				F4B7D65323DACB32007456D3 /* HeaderView.xib */,
 				F4B7D62C23DABB87007456D3 /* ListModel.swift */,
 				F4B7D62A23DABB75007456D3 /* Fetcher.swift */,
 				F451922322368D1A00EAB3B7 /* Global.swift */,
 				F451922422368D1A00EAB3B7 /* AnimatorManager.swift */,
 				F451922522368D1A00EAB3B7 /* UserDataManager.swift */,
 				F451922622368D1A00EAB3B7 /* Extensions.swift */,
+				F4B7D65223DACB32007456D3 /* HeaderView.swift */,
+				F4B7D65323DACB32007456D3 /* HeaderView.xib */,
+				F42E9CDE23E036C700496DE9 /* MenuView.swift */,
+				F42E9CE023E036CE00496DE9 /* MenuView.xib */,
+				F42E9CE223E0451F00496DE9 /* MenuTableViewCell.swift */,
+				F42E9CE323E0451F00496DE9 /* MenuTableViewCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -259,13 +271,13 @@
 				F4F487EE22376F90007242F2 /* Sources */,
 				F4F487EF22376F90007242F2 /* Frameworks */,
 				F4F487F022376F90007242F2 /* Resources */,
-				F4F4880822376FC1007242F2 /* Embed Frameworks */,
 				4A5C66D704BEEF3D598E0688 /* [CP] Embed Pods Frameworks */,
+				F42E9CD523E0078000496DE9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F4F4880722376FC0007242F2 /* PBXTargetDependency */,
+				F42E9CD423E0078000496DE9 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -315,7 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42E9CE523E0451F00496DE9 /* MenuTableViewCell.xib in Resources */,
 				F4B7D65523DACB32007456D3 /* HeaderView.xib in Resources */,
+				F42E9CE123E036CE00496DE9 /* MenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +443,8 @@
 				F451923A22368D1A00EAB3B7 /* AnimatorManager.swift in Sources */,
 				F4C1EEA523D196F500B3178A /* BaseNavigationController.swift in Sources */,
 				F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */,
+				F42E9CE423E0451F00496DE9 /* MenuTableViewCell.swift in Sources */,
+				F42E9CDF23E036C700496DE9 /* MenuView.swift in Sources */,
 				F4B7D62D23DABB87007456D3 /* ListModel.swift in Sources */,
 				F451923822368D1A00EAB3B7 /* BaseView.swift in Sources */,
 				F451923922368D1A00EAB3B7 /* Global.swift in Sources */,
@@ -448,10 +464,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F4F4880722376FC0007242F2 /* PBXTargetDependency */ = {
+		F42E9CD423E0078000496DE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F45DA0CA22366F8300288C68 /* PGFramework */;
-			targetProxy = F4F4880622376FC0007242F2 /* PBXContainerItemProxy */;
+			targetProxy = F42E9CD323E0078000496DE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -658,7 +674,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7216212DDD8D6865F71B3F61 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XE4E546GZY;
@@ -678,7 +693,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D45210E37654089CC4A8DE4 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XE4E546GZY;

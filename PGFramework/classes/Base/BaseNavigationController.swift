@@ -1,6 +1,5 @@
 //
 //  BaseNavigationController.swift
-//  PGFramework
 //
 //  Created by Hiroki Umatani on 2020/01/17.
 //  Copyright © 2020 Playground. All rights reserved.

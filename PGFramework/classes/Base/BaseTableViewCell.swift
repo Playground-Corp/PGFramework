@@ -1,6 +1,5 @@
 //
 //  BaseTableViewCell.swift
-//  Learning
 //
 //  Created by Playground, Inc. on 2018/09/20.
 //  Copyright © 2018 Playground, Inc.. All rights reserved.
