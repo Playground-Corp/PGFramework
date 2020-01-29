@@ -98,7 +98,7 @@ public func setNavigationBarColor(navigationBar: UINavigationBar,
 
 public func getClassName(fromObject: Any) -> String {
     let moduleName = NSStringFromClass(type(of: fromObject) as! AnyClass)
-    let startIndex = moduleName.index(of: ".")!
+    let startIndex = moduleName.firstIndex(of: ".")!
     let indexAfterModuleName = moduleName.index(after: startIndex)
     let classname = moduleName[indexAfterModuleName...]
     return String(classname)

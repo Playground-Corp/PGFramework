@@ -40,9 +40,7 @@ extension FirstViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checkCameraAuth {
-            
-        }
+        alertToSetting(title: "setting", message: "move to setting page")
     }
 }
 

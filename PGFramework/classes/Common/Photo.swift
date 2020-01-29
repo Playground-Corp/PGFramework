@@ -64,18 +64,22 @@ extension BaseViewController:  UIImagePickerControllerDelegate {
     public func moviePicker(deleteAction: @escaping (UIAlertAction) -> Void) {
         checkCameraAuth { [weak self] in
             guard let this = self else { return }
-            let alert: UIAlertController = UIAlertController(title: Const.Blank, message: Const.AskToSelect, preferredStyle: .actionSheet)
-            let galleryAction: UIAlertAction = UIAlertAction(title: Const.SelectFromAlbum, style: .default, handler:{
-                (action: UIAlertAction!) -> Void in
+            let alert: UIAlertController = UIAlertController(title: Const.Blank,
+                                                             message: Const.AskToSelect,
+                                                             preferredStyle: .actionSheet)
 
-                let sourceType:UIImagePickerController.SourceType = UIImagePickerController.SourceType.photoLibrary
-                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
-                    let libraryPicker = UIImagePickerController()
-                    libraryPicker.sourceType = sourceType
-                    libraryPicker.mediaTypes = [Const.PublicMovie]
-                    libraryPicker.delegate = this
-                    this.present(libraryPicker, animated: true, completion: nil)
-                }
+            let galleryAction: UIAlertAction = UIAlertAction(title: Const.SelectFromAlbum,
+                                                             style: .default,
+                                                             handler:{ (action: UIAlertAction!) -> Void in
+                                                                let sourceType:UIImagePickerController.SourceType = UIImagePickerController.SourceType.photoLibrary
+
+                                                                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+                                                                    let libraryPicker = UIImagePickerController()
+                                                                    libraryPicker.sourceType = sourceType
+                                                                    libraryPicker.mediaTypes = [Const.PublicMovie]
+                                                                    libraryPicker.delegate = this
+                                                                    this.present(libraryPicker, animated: true, completion: nil)
+                                                                }
             })
             let deleteAction = UIAlertAction(title: Const.DeleteMovie, style: .default, handler: deleteAction)
             let cancelAction = UIAlertAction(title: Const.Cancel, style: .cancel, handler: { (_) in })
@@ -139,50 +143,40 @@ extension BaseViewController:  UIImagePickerControllerDelegate {
     }
 
     public func alert(message: String) {
-        if message != Const.Blank {
-            let vc = UIAlertController(title: message, message: nil, preferredStyle: UIAlertController.Style.alert)
-            vc.addAction(UIAlertAction(title: Const.OK, style: .default, handler: nil))
-            present(vc, animated: true, completion: nil)
-        }else {
-            return
-        }
+        let vc = UIAlertController(title: message, message: nil, preferredStyle: UIAlertController.Style.alert)
+        vc.addAction(UIAlertAction(title: Const.OK, style: .default, handler: nil))
+        present(vc, animated: true, completion: nil)
     }
 
     public func alert(message: String, choiceHandler: @escaping ((UIAlertAction) -> Void)) {
-        if message != Const.Blank {
-            let vc = UIAlertController(title: message, message: nil, preferredStyle: UIAlertController.Style.alert)
-            vc.addAction(UIAlertAction(title: Const.OK, style: .default, handler: choiceHandler))
-            present(vc, animated: true, completion: nil)
-        }else {
-            return
-        }
+        let vc = UIAlertController(title: message, message: nil, preferredStyle: UIAlertController.Style.alert)
+        vc.addAction(UIAlertAction(title: Const.OK, style: .default, handler: choiceHandler))
+        present(vc, animated: true, completion: nil)
     }
 
-    public func alert(title: String?, message: String? = nil, choice: String? = nil, choiceStyle: Int? = nil, tintColor: UIColor? = nil, choiceHandler: @escaping () -> Void) {
+    public func alert(title: String?, message: String? = nil,
+                      choice: String? = nil, choiceStyle: Int? = nil,
+                      tintColor: UIColor? = nil, choiceHandler: @escaping () -> Void) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         ac.addAction(UIAlertAction(title: Const.Cancel, style: .cancel, handler: nil))
         if let choice = choice {
             ac.addAction(UIAlertAction(title: choice, style: .default, handler: { action in
                 choiceHandler()
-            } ))
+            }))
         }
         ac.view.tintColor = tintColor
         present(ac, animated: true, completion: nil)
     }
 
     public func alertToSetting(title: String, message: String) {
-        if message != Const.Blank {
-            let vc = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            vc.addAction(UIAlertAction(title: Const.OK, style: .default, handler: { _ in
-                if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-            }))
-            vc.addAction(UIAlertAction(title: Const.Cancel, style: .cancel, handler: nil))
-            present(vc, animated: true, completion: nil)
-        }else {
-            return
-        }
+        let vc = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        vc.addAction(UIAlertAction(title: Const.OK, style: .default, handler: { _ in
+            if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }))
+        vc.addAction(UIAlertAction(title: Const.Cancel, style: .cancel, handler: nil))
+        present(vc, animated: true, completion: nil)
     }
 
     public func callActionSheet(titles: [String], choiceHandler: [() -> Void]) {
