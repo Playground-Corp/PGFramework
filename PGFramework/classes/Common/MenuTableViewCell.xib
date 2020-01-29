@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-vt-HA3" userLabel="Under Line">
-                        <rect key="frame" x="20" y="43" width="280" height="1"/>
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="fXK-HK-zHl"/>
@@ -27,13 +27,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-9o-cpg">
                         <rect key="frame" x="32" y="11.5" width="256" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Kx2-vt-HA3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="HDn-JF-UBx"/>
-                    <constraint firstAttribute="trailing" secondItem="Kx2-vt-HA3" secondAttribute="trailing" constant="20" symbolic="YES" id="MBw-fc-OwM"/>
+                    <constraint firstItem="Kx2-vt-HA3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HDn-JF-UBx"/>
+                    <constraint firstAttribute="trailing" secondItem="Kx2-vt-HA3" secondAttribute="trailing" id="MBw-fc-OwM"/>
                     <constraint firstItem="HwN-9o-cpg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="SLf-Jk-gRE"/>
                     <constraint firstAttribute="trailing" secondItem="HwN-9o-cpg" secondAttribute="trailing" constant="32" id="WAF-7w-4Ul"/>
                     <constraint firstAttribute="bottom" secondItem="Kx2-vt-HA3" secondAttribute="bottom" id="ZIH-Zi-bc7"/>

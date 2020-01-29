@@ -19,6 +19,9 @@ extension Const {
 class FirstViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var menuView: MenuView!
+
+    var isHiddenMenuView: Bool = true
+    @IBOutlet weak var menuViewWidth: NSLayoutConstraint!
 }
 
 // MARK: - Life cycle
@@ -27,6 +30,7 @@ extension FirstViewController {
         super.loadView()
         setDelegates()
         setHeaderView()
+        setMenuView()
     }
 
     override func viewDidLoad() {
@@ -36,13 +40,21 @@ extension FirstViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        checkCameraAuth {
+            
+        }
     }
 }
 
 // MARK: - Protocol
 extension FirstViewController: HeaderViewDelegate {
     func touchedLeftButton(_ sender: UIButton) {
-
+        if isHiddenMenuView {
+            menuView.showMenuView()
+        } else {
+            menuView.hideMenuView()
+        }
+        isHiddenMenuView = !isHiddenMenuView
     }
 
     func touchedRightButton(_ sender: UIButton) {
@@ -55,8 +67,9 @@ extension FirstViewController: HeaderViewDelegate {
 }
 
 extension FirstViewController: MenuViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    func  tableView(indexPath: IndexPath) {
+        menuView.hideMenuView()
+        isHiddenMenuView = true
     }
 }
 
@@ -92,6 +105,14 @@ extension FirstViewController {
 
         // shadow
         setShadow(headerView,
+                  color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1),
+                  shadowRadius: 6)
+
+    }
+
+    func setMenuView() {
+        menuViewWidth.constant = SCREEN_WIDTH / 2.5
+        setShadow(menuView,
                   color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
                   shadowRadius: 3)
     }

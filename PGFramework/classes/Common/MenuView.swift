@@ -48,7 +48,7 @@ extension MenuView: UITableViewDataSource {
 }
 
 extension MenuView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.tableView(indexPath: indexPath)
         }
@@ -79,5 +79,22 @@ extension MenuView {
             [.flexibleHeight,
              .flexibleWidth]
         addSubview(view)
+        initHideHeaderView()
+    }
+
+    public func initHideHeaderView() {
+        self.transform = CGAffineTransform.init(translationX: -self.frame.width * 2, y: 0)
+    }
+
+    public func showMenuView() {
+        UIView.animate(withDuration: 0.4) {
+            self.transform = CGAffineTransform.identity
+        }
+    }
+
+    public func hideMenuView() {
+        UIView.animate(withDuration: 0.4) {
+            self.transform = CGAffineTransform.init(translationX: -self.frame.width * 2, y: 0)
+        }
     }
 }
