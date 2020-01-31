@@ -1,6 +1,5 @@
 //
 //  UserDataManager.swift
-//  Learning
 //
 //  Created by Playground, Inc. on 2018/11/04.
 //  Copyright © 2018 Playground, Inc.. All rights reserved.

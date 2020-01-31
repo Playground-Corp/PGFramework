@@ -1,6 +1,5 @@
 //
 //  BaseViewController.swift
-//  Learning
 //
 //  Created by Playground, Inc. on 2018/09/17.
 //  Copyright © 2018 Playground, Inc.. All rights reserved.
@@ -57,6 +56,7 @@ extension BaseViewController: UITabBarControllerDelegate {
     public func tabBarController(_ tabBarController: UITabBarController,
                           animationControllerForTransitionFrom fromVC: UIViewController,
                           to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animatorManager.navigationType = .none
         return animatorManager
     }
 }

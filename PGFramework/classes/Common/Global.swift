@@ -1,6 +1,5 @@
 //
 //  Global.swift
-//  Learning
 //
 //  Created by Playground, Inc. on 2018/09/17.
 //  Copyright © 2018 Playground, Inc.. All rights reserved.
@@ -8,8 +7,10 @@
 
 
 import UIKit
+import Security
 
-public let WIDTH: CGFloat = {
+/// 画面横のサイズ
+public let SCREEN_WIDTH: CGFloat = {
     var result: CGFloat = 0.0
     if let first = UIApplication.shared.windows.first {
         result = first.frame.width
@@ -17,7 +18,9 @@ public let WIDTH: CGFloat = {
     return result
 }()
 
-public let HEIGHT: CGFloat = {
+
+/// 画面縦のサイズ
+public let SCREEN_HEIGHT: CGFloat = {
     var result: CGFloat = 0.0
     if let first = UIApplication.shared.windows.first {
         result = first.frame.height
@@ -27,10 +30,16 @@ public let HEIGHT: CGFloat = {
 
 // MARK: - ***** FUNCTION **********
 
+
 public func propertyNames(owner: Any) -> [String] {
     return Mirror(reflecting: owner).children.compactMap{ $0.label }
 }
 
+/// 画面遷移処理(Xib間)
+/// - Parameters:
+///   - from: 遷移元のコントローラーオブジェクト
+///   - to: 遷移後のコントローラーオブジェクト
+///   - animated: アニメーションをするかしないか？
 public func transitionViewController(from: UIViewController, to: UIViewController, animated: Bool? = true) {
     if let navigationController = from.navigationController,
         let animated = animated {
@@ -38,6 +47,11 @@ public func transitionViewController(from: UIViewController, to: UIViewControlle
     }
 }
 
+
+/// 遷移元の画面に戻る処理
+/// - Parameters:
+///   - owner: 現在のコントローラーオブジェクト
+///   - animated: アニメーションするかしないか？
 public func popViewController(owner: UIViewController, animated: Bool? = true) {
     if let navigationController = owner.navigationController,
         let animated = animated {
@@ -45,6 +59,9 @@ public func popViewController(owner: UIViewController, animated: Bool? = true) {
     }
 }
 
+
+/// 画面遷移処理(ストーリーボード切り替え)
+/// - Parameter name: 遷移先のストーリーボード名
 public func transitionStoryboard(name: String) {
     if let window = UIApplication.shared.windows.first {
         let  storyboard: UIStoryboard = UIStoryboard(name: name, bundle: Bundle.main)
@@ -53,6 +70,9 @@ public func transitionStoryboard(name: String) {
     }
 }
 
+
+/// Xibから画面の作成
+/// - Parameter withOwner: 現在のビューかコントローラーオブジェクト
 public func loadViewFromXib(withOwner: Any) -> [Any]? {
     let name = getClassName(fromObject: withOwner)
     let nib: UINib = UINib.init(nibName: name, bundle: nil)
@@ -60,22 +80,32 @@ public func loadViewFromXib(withOwner: Any) -> [Any]? {
     return result
 }
 
+
+/// Xibからセルのテーブルビューのセルを作成
+/// - Parameters:
+///   - tableView: テーブルビューオブジェクト
+///   - cellName: セルのクラス名
 public func loadTableViewCellFromXib(tableView: UITableView, cellName: String) {
     let nib = UINib.init(nibName: cellName, bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: cellName)
     
 }
 
+
+/// Xibからコレクションビューセルを作成
+/// - Parameters:
+///   - collectionView: コレクションビューのオブジェクト
+///   - cellName: セルのクラス名
 public func loadCollectionViewCellFromXib(collectionView: UICollectionView, cellName: String) {
     let nib = UINib.init(nibName: cellName, bundle: nil)
     collectionView.register(nib, forCellWithReuseIdentifier: cellName)
 }
 
-public func setCollectionViewLayout(collectionView: UICollectionView, columnCount: Double, heithRatio: Double, direction: UICollectionView.ScrollDirection) -> Double {
+public func setCollectionViewLayout(collectionView: UICollectionView, columnCount: Double, heigthRatio: Double, direction: UICollectionView.ScrollDirection) -> Double {
     let flowLayout = UICollectionViewFlowLayout()
     let margin: CGFloat = 0.0
-    let cellWidth = Double(WIDTH) / columnCount
-    let cellHeight = cellWidth * heithRatio
+    let cellWidth = Double(collectionView.frame.width) / columnCount
+    let cellHeight = cellWidth * heigthRatio
     flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     flowLayout.scrollDirection = direction
     flowLayout.minimumInteritemSpacing = margin
@@ -96,7 +126,7 @@ public func setNavigationBarColor(navigationBar: UINavigationBar,
 
 public func getClassName(fromObject: Any) -> String {
     let moduleName = NSStringFromClass(type(of: fromObject) as! AnyClass)
-    let startIndex = moduleName.index(of: ".")!
+    let startIndex = moduleName.firstIndex(of: ".")!
     let indexAfterModuleName = moduleName.index(after: startIndex)
     let classname = moduleName[indexAfterModuleName...]
     return String(classname)
@@ -147,7 +177,10 @@ public func parsePlist(_ fileName: String) -> [[String: Any]]? {
     }
 }
 
-public func randomString(length: Int) -> String {
+
+/// ランダム文字列の作成
+/// - Parameter length: 作りたい文字の長さ
+public func makeRandomString(length: Int) -> String {
     let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     let len = UInt32(letters.length)
     var randomString = ""
@@ -159,7 +192,9 @@ public func randomString(length: Int) -> String {
     return randomString
 }
 
-func getUUID() -> String? {
+
+/// UUIDを取得
+public func getUUID() -> String? {
     var result: String?
     if let vendor = UIDevice.current.identifierForVendor {
         result = vendor.uuidString
@@ -167,12 +202,16 @@ func getUUID() -> String? {
     return result
 }
 
-func getOS() -> String {
+
+/// OSを取得
+public func getOS() -> String {
     let result = UIDevice.current.systemVersion
     return result
 }
 
-func getModel() -> String {
+
+/// システムモデルを取得
+public func getSystemModel() -> String {
     var systemInfo = utsname()
     uname(&systemInfo)
     let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -238,3 +277,4 @@ func getModel() -> String {
     }
     return mapToDevice(identifier: identifier)
 }
+

@@ -1,9 +1,8 @@
 //
 //  Fetcher.swift
-//  Sam
 //
 //  Created by Hiroki Umatani on 2018/08/21.
-//  Copyright © 2018 Engineer. All rights reserved.
+//  Copyright © 2018 Playground. All rights reserved.
 //
 
 import UIKit
@@ -63,7 +62,7 @@ public class Fetcher: NSObject {
         setPath(path: path)
 
         Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(data, withName: "image", fileName: randomString(length: 12)+".jpg", mimeType: "image/jpg")
+            multipartFormData.append(data, withName: "image", fileName: makeRandomString(length: 12)+".jpg", mimeType: "image/jpg")
 
         },
                          to: self.url ,

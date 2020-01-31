@@ -18,8 +18,10 @@ DerivedData
 
 # CocoaPod
 Pods/*
-
+*.podspec
 # others
 *.swp
 !.gitkeep
 .DS_Store
+
+docs
