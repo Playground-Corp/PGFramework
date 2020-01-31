@@ -12,7 +12,7 @@ pod 'PGFramework'
 </code>
 
 ### Document
-[document library](http://cocoadocs.org/docsets/PGFramework)
+[document library](https://playground.style/official/docs/)
 
 ### Licence
 [MIT](https://github.com/Playground-Corp/PGFramework/blob/master/LICENCE)
