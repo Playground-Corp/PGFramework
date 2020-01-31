@@ -20,9 +20,10 @@ public class AutoScrollView: UIView {
     weak var delegate: AutoScrollViewDelegate? = nil
     var view: UIView?
     @IBOutlet weak var scrollView: UICollectionView!
-    let items = ["One", "Two", "Three", "Four", "Five"]
+    
     let dummyCount = 655365
     var timer: Timer?
+    var autoScrollViewModel: AutoScrollViewModel = AutoScrollViewModel()
 }
 
 // MARK: - Life cycle
@@ -39,7 +40,7 @@ extension AutoScrollView {
 // MARK: - Protocol
 extension AutoScrollView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyCount * items.count
+        return dummyCount * autoScrollViewModel.contents.count
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,11 +48,8 @@ extension AutoScrollView: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
 
-        if indexPath.row % 2 == 0 {
-            cell.contentView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        } else {
-            cell.contentView.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
-        }
+        let itemIndex = indexPath.item % autoScrollViewModel.contents.count
+        cell.contentView.backgroundColor = autoScrollViewModel.contents[itemIndex].collectionViewCellBackgroundColor
         return cell
     }
 }
@@ -62,6 +60,23 @@ extension AutoScrollView: UICollectionViewDelegate {
 
 // MARK: - method
 extension AutoScrollView {
+    public func startTimer() {
+        if autoScrollViewModel.contents.count > 1 && timer == nil {
+            if let timeInterval = autoScrollViewModel.settings.animationTime {
+                timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(rotate), userInfo: nil, repeats: true)
+                timer!.fireDate = NSDate().addingTimeInterval(timeInterval) as Date
+            }
+        }
+    }
+
+    public func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    public func setModels(autoScrollViewModel: AutoScrollViewModel) {
+        self.autoScrollViewModel = autoScrollViewModel
+    }
+
     func loadView() {
         let bundle = Bundle(for: type(of: self))
         view = bundle.loadNibNamed(className, owner: self, options: nil)!.first as? UIView
@@ -106,30 +121,16 @@ extension AutoScrollView {
         } else if (currentOffset.x + cellWidth) > contentWidth {
             //right scrolling
             let difference = (currentOffset.x + cellWidth) - contentWidth
-
             scrollView.contentOffset = CGPoint(x: width - (cellWidth + difference), y: currentOffset.y)
         }
     }
 
     var totalContentWidth: CGFloat {
-        return CGFloat(items.count * dummyCount) * cellWidth
+        return CGFloat(autoScrollViewModel.contents.count * dummyCount) * cellWidth
     }
 
     var cellWidth: CGFloat {
         return scrollView.frame.width
-    }
-
-    public func startTimer() {
-        if items.count > 1 && timer == nil {
-            let timeInterval = 0.5;
-            timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(rotate), userInfo: nil, repeats: true)
-            timer!.fireDate = NSDate().addingTimeInterval(timeInterval) as Date
-        }
-    }
-
-    func stopTimer() {
-        timer?.invalidate()
-        timer = nil
     }
 
     @objc func rotate() {

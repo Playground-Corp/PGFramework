@@ -118,6 +118,33 @@ extension FirstViewController {
     }
 
     func setAutoScrollView() {
+        let model:AutoScrollViewModel = AutoScrollViewModel()
+        let settings:AutoScrollViewModelSettings = AutoScrollViewModelSettings()
+        let contents1: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+        let contents2: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+        let contents3: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+        let contents4: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+        let contents5: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+        let contents6: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+        let contents7: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+
+        settings.animationTime = 1.0
+        contents1.collectionViewCellBackgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        contents2.collectionViewCellBackgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        contents3.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        contents4.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        contents5.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        contents6.collectionViewCellBackgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        contents7.collectionViewCellBackgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        model.settings = settings
+        model.contents = [contents1,
+                          contents2,
+                          contents3,
+                          contents4,
+                          contents5,
+                          contents6,
+                          contents7]
+        autoScrollView.setModels(autoScrollViewModel: model)
         autoScrollView.startTimer()
     }
 }

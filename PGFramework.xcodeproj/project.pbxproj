@@ -20,6 +20,7 @@
 		F42E9D0723E438E500496DE9 /* AutoScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9D0623E438E500496DE9 /* AutoScrollView.xib */; };
 		F42E9D0923E43BB200496DE9 /* AutoScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */; };
 		F42E9D0B23E43BCA00496DE9 /* AutoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */; };
+		F42E9D0D23E4488A00496DE9 /* AutoScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */; };
 		F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */; };
 		F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921C22368D1A00EAB3B7 /* BaseViewController.swift */; };
 		F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		F42E9D0623E438E500496DE9 /* AutoScrollView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoScrollView.xib; sourceTree = "<group>"; };
 		F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollCollectionViewCell.swift; sourceTree = "<group>"; };
 		F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCollectionViewCell.xib; sourceTree = "<group>"; };
+		F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollViewModel.swift; sourceTree = "<group>"; };
 		F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		F451921C22368D1A00EAB3B7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				F42E9D0623E438E500496DE9 /* AutoScrollView.xib */,
 				F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */,
 				F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */,
+				F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42E9D0D23E4488A00496DE9 /* AutoScrollViewModel.swift in Sources */,
 				F451923522368D1A00EAB3B7 /* BaseCollectionViewCell.swift in Sources */,
 				F451923722368D1A00EAB3B7 /* BaseTableView.swift in Sources */,
 				F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */,
