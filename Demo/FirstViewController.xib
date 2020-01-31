@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="Demo" customModuleProvider="target">
             <connections>
+                <outlet property="autoScrollView" destination="M2M-Zf-8jY" id="PmN-Eg-cxQ"/>
                 <outlet property="headerView" destination="r4B-TK-5lQ" id="KkJ-lf-gd3"/>
                 <outlet property="menuView" destination="gNW-5W-gmG" id="QBY-uO-uqZ"/>
                 <outlet property="menuViewWidth" destination="EeS-qS-erx" id="aUY-Um-zSL"/>
@@ -28,6 +29,13 @@
                         <constraint firstAttribute="height" constant="44" id="hEj-95-89A"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2M-Zf-8jY" customClass="AutoScrollView" customModule="PGFramework">
+                    <rect key="frame" x="0.0" y="96" width="414" height="256"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="256" id="ggG-q4-GEg"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-5W-gmG" customClass="MenuView" customModule="PGFramework">
                     <rect key="frame" x="0.0" y="88" width="184" height="808"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -41,9 +49,12 @@
                 <constraint firstItem="r4B-TK-5lQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2XW-xY-h5U"/>
                 <constraint firstAttribute="bottom" secondItem="gNW-5W-gmG" secondAttribute="bottom" id="3xb-F9-fJP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r4B-TK-5lQ" secondAttribute="trailing" id="7sI-Af-UD7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M2M-Zf-8jY" secondAttribute="trailing" id="8q3-tp-pfD"/>
+                <constraint firstItem="M2M-Zf-8jY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DbK-dW-3sa"/>
                 <constraint firstItem="r4B-TK-5lQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KMZ-ue-Wzj"/>
                 <constraint firstItem="gNW-5W-gmG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XzI-5z-HVi"/>
                 <constraint firstItem="gNW-5W-gmG" firstAttribute="top" secondItem="r4B-TK-5lQ" secondAttribute="bottom" id="ohn-ue-QTp"/>
+                <constraint firstItem="M2M-Zf-8jY" firstAttribute="top" secondItem="r4B-TK-5lQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yO3-M4-NEB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="86.383928571428569"/>

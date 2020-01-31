@@ -22,6 +22,8 @@ class FirstViewController: BaseViewController {
 
     var isHiddenMenuView: Bool = true
     @IBOutlet weak var menuViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var autoScrollView: AutoScrollView!
+    
 }
 
 // MARK: - Life cycle
@@ -31,6 +33,7 @@ extension FirstViewController {
         setDelegates()
         setHeaderView()
         setMenuView()
+        setAutoScrollView()
     }
 
     override func viewDidLoad() {
@@ -40,7 +43,6 @@ extension FirstViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        alertToSetting(title: "setting", message: "move to setting page")
     }
 }
 
@@ -113,5 +115,9 @@ extension FirstViewController {
         setShadow(menuView,
                   color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
                   shadowRadius: 3)
+    }
+
+    func setAutoScrollView() {
+        autoScrollView.startTimer()
     }
 }
