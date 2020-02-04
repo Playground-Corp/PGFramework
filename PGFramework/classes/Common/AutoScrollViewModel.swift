@@ -15,19 +15,30 @@ public class AutoScrollViewModel: NSObject {
 }
 
 public class AutoScrollViewModelSettings: NSObject {
-    public var animationTime: Double?
+    public var scrollAnimationTime: Double?
     public var collectionViewBackgroundColor: UIColor?
-    public var collectionViewCellBackgroundColor: UIColor?
-    public var isHiddenTitleLabel: Bool = true
-    public var titleLabelTextColor: UIColor?
-    public var cellMargin: CGFloat?
 }
 
 public class AutoScrollViewModelContetnts: NSObject {
-    public var title: String?
+
+    /// セルのイメージURL
     public var image_url: String?
+
+    /// セルの背景色
     public var collectionViewCellBackgroundColor: UIColor?
+
+    /// タイトルのテキスト
+    public var titleText: String?
     public var isHiddenTitleLabel: Bool = true
     public var titleLabelTextColor: UIColor?
+    public var titleLabelFontSize: CGFloat?
+
+    /// 説明のテキスト
+    public var descriptionText: String?
+    public var isHiddenDescriptionLabel: Bool = true
+    public var descriptionLabelTextColor: UIColor?
+    public var descriptionLabelFontSize: CGFloat?
+
+    /// セルのマージン
     public var cellMargin: CGFloat?
 }

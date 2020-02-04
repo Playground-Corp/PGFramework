@@ -44,7 +44,6 @@ extension FirstViewController {
         setHeaderView()
         setMenuView()
         setAutoScrollView()
-
     }
 
     override func viewDidLoad() {
@@ -169,39 +168,51 @@ extension FirstViewController {
     }
 
     func setMenuView() {
-        menuViewWidth.constant = SCREEN_WIDTH / 2.5
+        menuViewWidth.constant = SCREEN_WIDTH / 3.0
         setShadow(menuView,
                   color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
                   shadowRadius: 3)
     }
 
     func setAutoScrollView() {
+        // model
         let model:AutoScrollViewModel = AutoScrollViewModel()
-        let settings:AutoScrollViewModelSettings = AutoScrollViewModelSettings()
-        let contents1: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
-        let contents2: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
-        let contents3: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
-        let contents4: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
-        let contents5: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
-        let contents6: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
-        let contents7: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
 
-        settings.animationTime = 5.0
-        contents1.collectionViewCellBackgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-        contents2.collectionViewCellBackgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-        contents3.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        contents4.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-        contents5.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        contents6.collectionViewCellBackgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
-        contents7.collectionViewCellBackgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        // settings
+        let settings: AutoScrollViewModelSettings = AutoScrollViewModelSettings()
+        settings.scrollAnimationTime = 5.0
         model.settings = settings
-        model.contents = [contents1,
-                          contents2,
-                          contents3,
-                          contents4,
-                          contents5,
-                          contents6,
-                          contents7]
+
+        // contetns
+        for i in 0..<6 {
+            // public
+            let contents: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
+            contents.titleText = "TITLE"
+            contents.isHiddenTitleLabel = false
+            contents.titleLabelFontSize = 32
+
+            contents.descriptionText = "DESCRIPTION"
+            contents.isHiddenDescriptionLabel = false
+            contents.cellMargin = 8
+            // private
+            switch i {
+            case 0:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            case 1:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            case 2:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            case 3:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            case 4:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            case 5:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            default:
+                contents.collectionViewCellBackgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            }
+            model.contents += [contents]
+        }
         autoScrollView.setModels(autoScrollViewModel: model)
         autoScrollView.startTimer()
     }

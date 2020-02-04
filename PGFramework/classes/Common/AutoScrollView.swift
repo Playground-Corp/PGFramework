@@ -21,7 +21,7 @@ public class AutoScrollView: UIView {
     // view
     var view: UIView?
     @IBOutlet weak var scrollView: UICollectionView!
-    
+
     let dummyCount = 512
     var timer: Timer?
     var autoScrollViewModel: AutoScrollViewModel = AutoScrollViewModel()
@@ -32,8 +32,8 @@ extension AutoScrollView {
     override open func awakeFromNib() {
         super.awakeFromNib()
         loadView()
+        setView()
         loadCells()
-        setCollectionView()
         setDelegates()
     }
 }
@@ -50,7 +50,7 @@ extension AutoScrollView: UICollectionViewDataSource {
         }
 
         let itemIndex = indexPath.item % autoScrollViewModel.contents.count
-        cell.contentView.backgroundColor = autoScrollViewModel.contents[itemIndex].collectionViewCellBackgroundColor
+        cell.updateView(autoScrollViewModelContetnts: autoScrollViewModel.contents[itemIndex])
         return cell
     }
 }
@@ -67,17 +67,23 @@ extension AutoScrollView: UICollectionViewDelegate {
 extension AutoScrollView {
     public func startTimer() {
         if autoScrollViewModel.contents.count > 1 && timer == nil {
-            if let timeInterval = autoScrollViewModel.settings.animationTime {
+            if let timeInterval = autoScrollViewModel.settings.scrollAnimationTime {
                 timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(rotate), userInfo: nil, repeats: true)
-                timer!.fireDate = NSDate().addingTimeInterval(timeInterval) as Date
+                if let timer = timer {
+                    timer.fireDate = NSDate().addingTimeInterval(timeInterval) as Date
+                }
+
             }
         }
     }
 
     public func stopTimer() {
-        timer?.invalidate()
+        if let timer = timer {
+            timer.invalidate()
+        }
         timer = nil
     }
+    
     public func setModels(autoScrollViewModel: AutoScrollViewModel) {
         self.autoScrollViewModel = autoScrollViewModel
     }
@@ -106,8 +112,12 @@ extension AutoScrollView {
         scrollView.delegate = self
     }
 
-    func setCollectionView() {
-        let _ = setCollectionViewLayout(collectionView: scrollView, columnCount: 1.0, heigthRatio: 1.0, direction: .horizontal)
+    public func setView() {
+        if let height: CGFloat = view?.superview?.frame.height {
+            _ = setCollectionViewLayout(collectionView: scrollView, columnCount: 1.0, heigth: Double(height), direction: .horizontal)
+        }
+
+
     }
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
