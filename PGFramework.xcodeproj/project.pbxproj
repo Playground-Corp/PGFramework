@@ -16,6 +16,11 @@
 		F42E9CE423E0451F00496DE9 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9CE223E0451F00496DE9 /* MenuTableViewCell.swift */; };
 		F42E9CE523E0451F00496DE9 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9CE323E0451F00496DE9 /* MenuTableViewCell.xib */; };
 		F42E9CE723E141CB00496DE9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9CE623E141CB00496DE9 /* Photo.swift */; };
+		F42E9D0523E4388800496DE9 /* AutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9D0423E4388800496DE9 /* AutoScrollView.swift */; };
+		F42E9D0723E438E500496DE9 /* AutoScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9D0623E438E500496DE9 /* AutoScrollView.xib */; };
+		F42E9D0923E43BB200496DE9 /* AutoScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */; };
+		F42E9D0B23E43BCA00496DE9 /* AutoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */; };
+		F42E9D0D23E4488A00496DE9 /* AutoScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */; };
 		F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */; };
 		F451923322368D1A00EAB3B7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921C22368D1A00EAB3B7 /* BaseViewController.swift */; };
 		F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */; };
@@ -75,6 +80,11 @@
 		F42E9CE223E0451F00496DE9 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		F42E9CE323E0451F00496DE9 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		F42E9CE623E141CB00496DE9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F42E9D0423E4388800496DE9 /* AutoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollView.swift; sourceTree = "<group>"; };
+		F42E9D0623E438E500496DE9 /* AutoScrollView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoScrollView.xib; sourceTree = "<group>"; };
+		F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollCollectionViewCell.swift; sourceTree = "<group>"; };
+		F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCollectionViewCell.xib; sourceTree = "<group>"; };
+		F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollViewModel.swift; sourceTree = "<group>"; };
 		F451921B22368D1A00EAB3B7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		F451921C22368D1A00EAB3B7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F451921D22368D1A00EAB3B7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +194,11 @@
 				F42E9CE023E036CE00496DE9 /* MenuView.xib */,
 				F42E9CE223E0451F00496DE9 /* MenuTableViewCell.swift */,
 				F42E9CE323E0451F00496DE9 /* MenuTableViewCell.xib */,
+				F42E9D0423E4388800496DE9 /* AutoScrollView.swift */,
+				F42E9D0623E438E500496DE9 /* AutoScrollView.xib */,
+				F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */,
+				F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */,
+				F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -332,7 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42E9CE523E0451F00496DE9 /* MenuTableViewCell.xib in Resources */,
+				F42E9D0B23E43BCA00496DE9 /* AutoCollectionViewCell.xib in Resources */,
 				F4B7D65523DACB32007456D3 /* HeaderView.xib in Resources */,
+				F42E9D0723E438E500496DE9 /* AutoScrollView.xib in Resources */,
 				F42E9CE123E036CE00496DE9 /* MenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,12 +454,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42E9D0D23E4488A00496DE9 /* AutoScrollViewModel.swift in Sources */,
 				F451923522368D1A00EAB3B7 /* BaseCollectionViewCell.swift in Sources */,
 				F451923722368D1A00EAB3B7 /* BaseTableView.swift in Sources */,
 				F451923422368D1A00EAB3B7 /* BaseTableViewCell.swift in Sources */,
 				F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */,
 				F451923B22368D1A00EAB3B7 /* UserDataManager.swift in Sources */,
 				F4B7D62B23DABB75007456D3 /* Fetcher.swift in Sources */,
+				F42E9D0523E4388800496DE9 /* AutoScrollView.swift in Sources */,
 				F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */,
 				F451923A22368D1A00EAB3B7 /* AnimatorManager.swift in Sources */,
 				F4C1EEA523D196F500B3178A /* BaseNavigationController.swift in Sources */,
@@ -452,6 +471,7 @@
 				F42E9CDF23E036C700496DE9 /* MenuView.swift in Sources */,
 				F4B7D62D23DABB87007456D3 /* ListModel.swift in Sources */,
 				F451923822368D1A00EAB3B7 /* BaseView.swift in Sources */,
+				F42E9D0923E43BB200496DE9 /* AutoScrollCollectionViewCell.swift in Sources */,
 				F451923922368D1A00EAB3B7 /* Global.swift in Sources */,
 				F4B7D65423DACB32007456D3 /* HeaderView.swift in Sources */,
 			);

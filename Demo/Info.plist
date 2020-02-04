@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>カメラ使う？</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>常に位置情報を取得します</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>アプリ起動中のみ位置情報を取得します</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>写真使う？</string>
 	<key>UILaunchStoryboardName</key>

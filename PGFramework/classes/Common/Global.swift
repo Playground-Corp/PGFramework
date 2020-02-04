@@ -115,6 +115,20 @@ public func setCollectionViewLayout(collectionView: UICollectionView, columnCoun
     return cellHeight
 }
 
+public func setCollectionViewLayout(collectionView: UICollectionView, columnCount: Double, heigth: Double, direction: UICollectionView.ScrollDirection) -> Double {
+    let flowLayout = UICollectionViewFlowLayout()
+    let margin: CGFloat = 0.0
+    let cellWidth = Double(collectionView.frame.width) / columnCount
+    let cellHeight = heigth
+    flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+    flowLayout.scrollDirection = direction
+    flowLayout.minimumInteritemSpacing = margin
+    flowLayout.minimumLineSpacing = margin
+    flowLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+    collectionView.collectionViewLayout = flowLayout
+    return cellHeight
+}
+
 public func setTabBarTintColor(tabBar: UITabBar, colorHex: String) {
     tabBar.barTintColor = UIColor(hex: colorHex)
 }
