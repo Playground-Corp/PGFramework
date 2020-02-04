@@ -18,6 +18,7 @@ extension AutoCollectionViewCellDelegate {
 // MARK: - Property
 class AutoCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: AutoCollectionViewCellDelegate? = nil
+    var autoScrollViewModelContetnts: AutoScrollViewModelContetnts = AutoScrollViewModelContetnts()
 }
 
 // MARK: - Life cycle
@@ -34,5 +35,12 @@ extension AutoCollectionViewCell {
 
 // MARK: - method
 extension AutoCollectionViewCell {
+    func updateView(autoScrollViewModelContetnts: AutoScrollViewModelContetnts) {
+        self.autoScrollViewModelContetnts = autoScrollViewModelContetnts
 
+        // image
+        let fetcher: Fetcher = Fetcher()
+
+        
+    }
 }

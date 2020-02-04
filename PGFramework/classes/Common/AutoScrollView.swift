@@ -8,20 +8,21 @@
 
 import UIKit
 
-protocol AutoScrollViewDelegate: NSObjectProtocol{
-
+public protocol AutoScrollViewDelegate: NSObjectProtocol{
+    func collectionView(indexPath: IndexPath)
 }
 
 extension AutoScrollViewDelegate {
-
+    public func collectionView(indexPath: IndexPath) {}
 }
 // MARK: - Property
 public class AutoScrollView: UIView {
-    weak var delegate: AutoScrollViewDelegate? = nil
+    public weak var delegate: AutoScrollViewDelegate? = nil
+    // view
     var view: UIView?
     @IBOutlet weak var scrollView: UICollectionView!
     
-    let dummyCount = 655365
+    let dummyCount = 512
     var timer: Timer?
     var autoScrollViewModel: AutoScrollViewModel = AutoScrollViewModel()
 }
@@ -55,7 +56,11 @@ extension AutoScrollView: UICollectionViewDataSource {
 }
 
 extension AutoScrollView: UICollectionViewDelegate {
-
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.collectionView(indexPath: indexPath)
+        }
+    }
 }
 
 // MARK: - method
