@@ -69,7 +69,16 @@ extension FirstViewController: HeaderViewDelegate {
         isHiddenMenuView = !isHiddenMenuView
     }
 
-    func touchedRightButton(_ sender: UIButton) { return }
+    func touchedRightButton(_ sender: UIButton) {
+        
+        let dateManagerModel: DateManagerModel = DateManager.getIntervalDays(fromDay: "1978/11/13 00:00:00", toDay: "2020/02/05 16:36:10")
+        print(dateManagerModel.year,
+              dateManagerModel.month,
+              dateManagerModel.day,
+              dateManagerModel.hour,
+              dateManagerModel.minute,
+              dateManagerModel.second)
+    }
 
     func touchedCenterButton(_ sender: UIButton) { return }
 }

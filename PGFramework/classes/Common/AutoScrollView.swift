@@ -15,6 +15,7 @@ public protocol AutoScrollViewDelegate: NSObjectProtocol{
 extension AutoScrollViewDelegate {
     public func collectionView(indexPath: IndexPath) {}
 }
+
 // MARK: - Property
 public class AutoScrollView: UIView {
     public weak var delegate: AutoScrollViewDelegate? = nil

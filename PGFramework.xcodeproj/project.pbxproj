@@ -32,6 +32,7 @@
 		F451923B22368D1A00EAB3B7 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922522368D1A00EAB3B7 /* UserDataManager.swift */; };
 		F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451922622368D1A00EAB3B7 /* Extensions.swift */; };
 		F45DA0D022366F8300288C68 /* PGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F45DA0CE22366F8300288C68 /* PGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F49B227523EA68FD00E6D910 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B227423EA68FD00E6D910 /* DateManager.swift */; };
 		F4B7D62B23DABB75007456D3 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7D62A23DABB75007456D3 /* Fetcher.swift */; };
 		F4B7D62D23DABB87007456D3 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7D62C23DABB87007456D3 /* ListModel.swift */; };
 		F4B7D65423DACB32007456D3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7D65223DACB32007456D3 /* HeaderView.swift */; };
@@ -98,6 +99,7 @@
 		F45DA0CB22366F8300288C68 /* PGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DA0CE22366F8300288C68 /* PGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGFramework.h; sourceTree = "<group>"; };
 		F45DA0CF22366F8300288C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49B227423EA68FD00E6D910 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		F4B7D62A23DABB75007456D3 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		F4B7D62C23DABB87007456D3 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		F4B7D65223DACB32007456D3 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				F42E9D0823E43BB200496DE9 /* AutoScrollCollectionViewCell.swift */,
 				F42E9D0A23E43BCA00496DE9 /* AutoCollectionViewCell.xib */,
 				F42E9D0C23E4488A00496DE9 /* AutoScrollViewModel.swift */,
+				F49B227423EA68FD00E6D910 /* DateManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				F451923222368D1A00EAB3B7 /* BaseTabBarController.swift in Sources */,
 				F451923B22368D1A00EAB3B7 /* UserDataManager.swift in Sources */,
 				F4B7D62B23DABB75007456D3 /* Fetcher.swift in Sources */,
+				F49B227523EA68FD00E6D910 /* DateManager.swift in Sources */,
 				F42E9D0523E4388800496DE9 /* AutoScrollView.swift in Sources */,
 				F451923C22368D1A00EAB3B7 /* Extensions.swift in Sources */,
 				F451923A22368D1A00EAB3B7 /* AnimatorManager.swift in Sources */,
