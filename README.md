@@ -15,7 +15,7 @@ pod 'PGFramework'
 [document library](https://playground.style/official/docs/)
 
 ### Licence
-[MIT](https://github.com/Playground-Corp/PGFramework/blob/master/LICENCE)
+[MIT](https://github.com/Playground-Corp/PGFramework/blob/develop/LICENCE)
 
 ### Author
 [HP](https://playground.style)  
